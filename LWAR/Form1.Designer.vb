@@ -29,13 +29,24 @@ Partial Class Form1
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ProjectsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SourcecodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SourcecodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ProjectsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.product_label = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cancel_button = New System.Windows.Forms.Button()
+        Me.start_button = New System.Windows.Forms.Button()
+        Me.hide_button = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -57,7 +68,7 @@ Partial Class Form1
         'QuitLWARToolStripMenuItem
         '
         Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
-        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
         '
         'ToolsToolStripMenuItem
@@ -70,7 +81,7 @@ Partial Class Form1
         'PreferencesToolStripMenuItem
         '
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'HelpToolStripMenuItem
@@ -85,6 +96,23 @@ Partial Class Form1
         Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
         Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.DocumentationToolStripMenuItem.Text = "&Documentation"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(167, 6)
+        '
+        'ProjectsiteToolStripMenuItem
+        '
+        Me.ProjectsiteToolStripMenuItem.Name = "ProjectsiteToolStripMenuItem"
+        Me.ProjectsiteToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ProjectsiteToolStripMenuItem.Text = "Project &site"
+        '
+        'SourcecodeToolStripMenuItem
+        '
+        Me.SourcecodeToolStripMenuItem.Name = "SourcecodeToolStripMenuItem"
+        Me.SourcecodeToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.SourcecodeToolStripMenuItem.Text = "Source &code"
         '
         'ToolStripSeparator1
         '
@@ -103,35 +131,116 @@ Partial Class Form1
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
-        'SourcecodeToolStripMenuItem
+        'PictureBox1
         '
-        Me.SourcecodeToolStripMenuItem.Name = "SourcecodeToolStripMenuItem"
-        Me.SourcecodeToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.SourcecodeToolStripMenuItem.Text = "Source &code"
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(89, 89)
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
-        'ProjectsiteToolStripMenuItem
+        'product_label
         '
-        Me.ProjectsiteToolStripMenuItem.Name = "ProjectsiteToolStripMenuItem"
-        Me.ProjectsiteToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.ProjectsiteToolStripMenuItem.Text = "Project &site"
+        Me.product_label.AutoSize = True
+        Me.product_label.Font = New System.Drawing.Font("Microsoft Sans Serif", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.product_label.Location = New System.Drawing.Point(107, 27)
+        Me.product_label.Name = "product_label"
+        Me.product_label.Size = New System.Drawing.Size(163, 55)
+        Me.product_label.TabIndex = 2
+        Me.product_label.Text = "LWAR"
         '
-        'ToolStripSeparator2
+        'Label1
         '
-        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(167, 6)
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(112, 87)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 29)
+        Me.Label1.TabIndex = 3
+        Me.Label1.Text = "Start"
+        '
+        'cancel_button
+        '
+        Me.cancel_button.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.cancel_button.Location = New System.Drawing.Point(415, 323)
+        Me.cancel_button.Name = "cancel_button"
+        Me.cancel_button.Size = New System.Drawing.Size(75, 23)
+        Me.cancel_button.TabIndex = 4
+        Me.cancel_button.Text = "&Cancel"
+        Me.cancel_button.UseVisualStyleBackColor = True
+        '
+        'start_button
+        '
+        Me.start_button.Location = New System.Drawing.Point(334, 323)
+        Me.start_button.Name = "start_button"
+        Me.start_button.Size = New System.Drawing.Size(75, 23)
+        Me.start_button.TabIndex = 5
+        Me.start_button.Text = "&Start"
+        Me.start_button.UseVisualStyleBackColor = True
+        '
+        'hide_button
+        '
+        Me.hide_button.Location = New System.Drawing.Point(12, 323)
+        Me.hide_button.Name = "hide_button"
+        Me.hide_button.Size = New System.Drawing.Size(75, 23)
+        Me.hide_button.TabIndex = 6
+        Me.hide_button.Text = "&Hide"
+        Me.hide_button.UseVisualStyleBackColor = True
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.Label2)
+        Me.GroupBox1.Location = New System.Drawing.Point(47, 131)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(405, 174)
+        Me.GroupBox1.TabIndex = 7
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Start"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(6, 59)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(74, 16)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Username:"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(86, 58)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(313, 20)
+        Me.TextBox1.TabIndex = 1
         '
         'Form1
         '
+        Me.AcceptButton = Me.start_button
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.cancel_button
         Me.ClientSize = New System.Drawing.Size(502, 358)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.hide_button)
+        Me.Controls.Add(Me.start_button)
+        Me.Controls.Add(Me.cancel_button)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.product_label)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "LWAR"
+        Me.Text = "Start - LWAR"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -149,5 +258,14 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ProjectsiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents SourcecodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents product_label As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents cancel_button As System.Windows.Forms.Button
+    Friend WithEvents start_button As System.Windows.Forms.Button
+    Friend WithEvents hide_button As System.Windows.Forms.Button
+    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label2 As System.Windows.Forms.Label
 
 End Class

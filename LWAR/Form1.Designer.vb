@@ -29,9 +29,12 @@ Partial Class Form1
         Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SourcecodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -72,7 +75,7 @@ Partial Class Form1
         '
         'HelpToolStripMenuItem
         '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentationToolStripMenuItem, Me.ToolStripSeparator1, Me.CheckForUpdatesToolStripMenuItem, Me.AboutLWARToolStripMenuItem})
+        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentationToolStripMenuItem, Me.ToolStripSeparator2, Me.ProjectsiteToolStripMenuItem, Me.SourcecodeToolStripMenuItem, Me.ToolStripSeparator1, Me.CheckForUpdatesToolStripMenuItem, Me.AboutLWARToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "&Help"
@@ -83,11 +86,10 @@ Partial Class Form1
         Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.DocumentationToolStripMenuItem.Text = "&Documentation"
         '
-        'AboutLWARToolStripMenuItem
+        'ToolStripSeparator1
         '
-        Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
-        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(167, 6)
         '
         'CheckForUpdatesToolStripMenuItem
         '
@@ -95,10 +97,28 @@ Partial Class Form1
         Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.CheckForUpdatesToolStripMenuItem.Text = "&Check for updates"
         '
-        'ToolStripSeparator1
+        'AboutLWARToolStripMenuItem
         '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(167, 6)
+        Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
+        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
+        '
+        'SourcecodeToolStripMenuItem
+        '
+        Me.SourcecodeToolStripMenuItem.Name = "SourcecodeToolStripMenuItem"
+        Me.SourcecodeToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.SourcecodeToolStripMenuItem.Text = "Source &code"
+        '
+        'ProjectsiteToolStripMenuItem
+        '
+        Me.ProjectsiteToolStripMenuItem.Name = "ProjectsiteToolStripMenuItem"
+        Me.ProjectsiteToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ProjectsiteToolStripMenuItem.Text = "Project &site"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(167, 6)
         '
         'Form1
         '
@@ -126,5 +146,8 @@ Partial Class Form1
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CheckForUpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ProjectsiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SourcecodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

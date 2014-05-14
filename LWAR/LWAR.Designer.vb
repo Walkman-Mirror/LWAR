@@ -25,20 +25,14 @@ Partial Class LWAR
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LWAR))
         Me.MainMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.ProjectsiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SourcecodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lblProduct = New System.Windows.Forms.Label()
         Me.lblCurrentPage = New System.Windows.Forms.Label()
-        Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnHide = New System.Windows.Forms.Button()
         Me.GroupBoxStart = New System.Windows.Forms.GroupBox()
@@ -51,7 +45,13 @@ Partial Class LWAR
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.lblUsername = New System.Windows.Forms.Label()
+        Me.btnCancel = New System.Windows.Forms.Button()
         Me.imgLogo = New System.Windows.Forms.PictureBox()
+        Me.QuitLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PreferencesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MainMenuStrip.SuspendLayout()
         Me.GroupBoxStart.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,13 +73,6 @@ Partial Class LWAR
         Me.FileToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
-        'QuitLWARToolStripMenuItem
-        '
-        Me.QuitLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Exit2
-        Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
-        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
-        '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreferencesToolStripMenuItem})
@@ -87,26 +80,12 @@ Partial Class LWAR
         Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
         '
-        'PreferencesToolStripMenuItem
-        '
-        Me.PreferencesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Options
-        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
-        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentationToolStripMenuItem, Me.ToolStripSeparator2, Me.ProjectsiteToolStripMenuItem, Me.SourcecodeToolStripMenuItem, Me.ToolStripSeparator1, Me.CheckForUpdatesToolStripMenuItem, Me.AboutLWARToolStripMenuItem})
         Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
         Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem.Text = "&Help"
-        '
-        'DocumentationToolStripMenuItem
-        '
-        Me.DocumentationToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Help
-        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
-        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.DocumentationToolStripMenuItem.Text = "&Documentation"
         '
         'ToolStripSeparator2
         '
@@ -130,20 +109,6 @@ Partial Class LWAR
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
         Me.ToolStripSeparator1.Size = New System.Drawing.Size(176, 6)
         '
-        'CheckForUpdatesToolStripMenuItem
-        '
-        Me.CheckForUpdatesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.external_link
-        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.CheckForUpdatesToolStripMenuItem.Text = "&Check for updates"
-        '
-        'AboutLWARToolStripMenuItem
-        '
-        Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Info
-        Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
-        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
-        '
         'lblProduct
         '
         Me.lblProduct.AutoSize = True
@@ -163,19 +128,6 @@ Partial Class LWAR
         Me.lblCurrentPage.Size = New System.Drawing.Size(62, 29)
         Me.lblCurrentPage.TabIndex = 3
         Me.lblCurrentPage.Text = "Start"
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources.Exit2
-        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.btnCancel.Location = New System.Drawing.Point(415, 323)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 10
-        Me.btnCancel.Text = "&Cancel"
-        Me.btnCancel.UseVisualStyleBackColor = True
         '
         'btnStart
         '
@@ -307,13 +259,63 @@ Partial Class LWAR
         Me.lblUsername.TabIndex = 0
         Me.lblUsername.Text = "&Username:"
         '
+        'btnCancel
+        '
+        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources.Exit2
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnCancel.Location = New System.Drawing.Point(415, 323)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.Text = "&Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
         'imgLogo
         '
+        Me.imgLogo.BackgroundImage = Global.LWAR.My.Resources.Resources._2014_05_14_204202
+        Me.imgLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.imgLogo.Location = New System.Drawing.Point(12, 27)
         Me.imgLogo.Name = "imgLogo"
-        Me.imgLogo.Size = New System.Drawing.Size(89, 89)
+        Me.imgLogo.Size = New System.Drawing.Size(89, 98)
         Me.imgLogo.TabIndex = 1
         Me.imgLogo.TabStop = False
+        '
+        'QuitLWARToolStripMenuItem
+        '
+        Me.QuitLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Exit2
+        Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
+        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
+        '
+        'PreferencesToolStripMenuItem
+        '
+        Me.PreferencesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Options
+        Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItem.Text = "&Preferences"
+        '
+        'DocumentationToolStripMenuItem
+        '
+        Me.DocumentationToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Help
+        Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
+        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.DocumentationToolStripMenuItem.Text = "&Documentation"
+        '
+        'CheckForUpdatesToolStripMenuItem
+        '
+        Me.CheckForUpdatesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.external_link
+        Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Text = "&Check for updates"
+        '
+        'AboutLWARToolStripMenuItem
+        '
+        Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Info
+        Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
+        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
         'LWAR
         '
@@ -332,7 +334,6 @@ Partial Class LWAR
         Me.Controls.Add(Me.MainMenuStrip)
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MainMenuStrip = Me.MainMenuStrip
         Me.Name = "LWAR"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Start - LWAR"

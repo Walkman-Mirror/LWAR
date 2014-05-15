@@ -1,7 +1,7 @@
 ﻿Public Class LWAR
 
     Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles QuitLWARToolStripMenuItem.Click, btnCancel.Click
-        End
+        Application.Exit()
     End Sub
 
     Private Sub HideLWAR(sender As Object, e As EventArgs) Handles btnHide.Click

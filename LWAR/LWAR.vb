@@ -32,7 +32,7 @@
     End Sub
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
-        txtFile.Text = MsgBox("Select File: ", MsgBoxStyle.Question, "Browse for a file...")
-
+        OpenFileDialog1.ShowDialog()
+        txtFile.Text = OpenFileDialog1.FileName.ToString()
     End Sub
 End Class

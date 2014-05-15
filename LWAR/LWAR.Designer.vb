@@ -22,6 +22,7 @@ Partial Class LWAR
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LWAR))
         Me.MainMenuStrip = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -52,6 +53,8 @@ Partial Class LWAR
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.imgLogo = New System.Windows.Forms.PictureBox()
+        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.MainMenuStrip.SuspendLayout()
         Me.GroupBoxStart.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -70,28 +73,28 @@ Partial Class LWAR
         '
         Me.FileToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitLWARToolStripMenuItem})
         Me.FileToolStripMenuItem.Name = "FileToolStripMenuItem"
-        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(38, 20)
+        Me.FileToolStripMenuItem.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItem.Text = "&File"
         '
         'QuitLWARToolStripMenuItem
         '
         Me.QuitLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Exit2
         Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
-        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreferencesToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItem.Text = "&Tools"
         '
         'PreferencesToolStripMenuItem
         '
         Me.PreferencesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Options
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'HelpToolStripMenuItem
@@ -105,43 +108,43 @@ Partial Class LWAR
         '
         Me.DocumentationToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Help
         Me.DocumentationToolStripMenuItem.Name = "DocumentationToolStripMenuItem"
-        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.DocumentationToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.DocumentationToolStripMenuItem.Text = "&Documentation"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(167, 6)
         '
         'ProjectsiteToolStripMenuItem
         '
         Me.ProjectsiteToolStripMenuItem.Name = "ProjectsiteToolStripMenuItem"
-        Me.ProjectsiteToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ProjectsiteToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ProjectsiteToolStripMenuItem.Text = "Project &site"
         '
         'SourcecodeToolStripMenuItem
         '
         Me.SourcecodeToolStripMenuItem.Name = "SourcecodeToolStripMenuItem"
-        Me.SourcecodeToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SourcecodeToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.SourcecodeToolStripMenuItem.Text = "Source &code"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(167, 6)
         '
         'CheckForUpdatesToolStripMenuItem
         '
         Me.CheckForUpdatesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.external_link
         Me.CheckForUpdatesToolStripMenuItem.Name = "CheckForUpdatesToolStripMenuItem"
-        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.CheckForUpdatesToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.CheckForUpdatesToolStripMenuItem.Text = "&Check for updates"
         '
         'AboutLWARToolStripMenuItem
         '
         Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Info
         Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
-        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
         'lblProduct
@@ -317,6 +320,15 @@ Partial Class LWAR
         Me.imgLogo.TabIndex = 1
         Me.imgLogo.TabStop = False
         '
+        'NotifyIcon1
+        '
+        Me.NotifyIcon1.Text = "NotifyIcon1"
+        Me.NotifyIcon1.Visible = True
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
         'LWAR
         '
         Me.AcceptButton = Me.btnStart
@@ -375,5 +387,7 @@ Partial Class LWAR
     Friend WithEvents txtPassword As System.Windows.Forms.TextBox
     Friend WithEvents lblPassword As System.Windows.Forms.Label
     Friend WithEvents btnBrowse As System.Windows.Forms.Button
+    Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 
 End Class

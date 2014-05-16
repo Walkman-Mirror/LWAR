@@ -20,8 +20,7 @@
 Public Class About
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Me.Text = "About " & My.Application.Info.ProductName
-        Dim version As String = My.Application.Info.Version.ToString & " (beta)"
-        Label4.Text = version
+        Label4.Text = My.Application.Info.Version.ToString & " (beta)"
         WebBrowser1.Navigate("https://campustools.github.io/LWAR/changelog.txt")
         WebBrowser2.Navigate("https://campustools.github.io/LWAR/credits.txt")
         WebBrowser3.Navigate("https://campustools.github.io/LWAR/licenses.txt")

@@ -134,6 +134,12 @@
     <Compile Include="ProposedSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Updates.Designer.vb">
+      <DependentUpon>Updates.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Updates.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences.resx">
       <DependentUpon>Preferences.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Updates.resx">
+      <DependentUpon>Updates.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

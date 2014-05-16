@@ -15,7 +15,7 @@
         End If
     End Sub
 
-    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
+    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click
         Application.Exit()
     End Sub
 
@@ -38,11 +38,11 @@
     Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click
         'Show Documentation, URl??
     End Sub
-    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ProjectsiteToolStripMenuItem.Click
+    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs)
         Process.Start("http://campustools.github.io/LWAR")
     End Sub
 
-    Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles SourcecodeToolStripMenuItem.Click
+    Private Sub OpenSourceCode(sender As Object, e As EventArgs)
         Process.Start("http://www.github.com/CampusTools/LWAR")
     End Sub
 
@@ -66,7 +66,7 @@
         'start program
     End Sub
 
-    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click
+    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs)
         'Show about window
     End Sub
 

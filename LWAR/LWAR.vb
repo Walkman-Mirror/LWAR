@@ -73,4 +73,11 @@
         Preferences.Show()
     End Sub
 
+    Private Sub ProjectSiteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProjectSiteToolStripMenuItem1.Click
+
+    End Sub
+
+    Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
+        Me.Show()
+    End Sub
 End Class

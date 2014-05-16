@@ -59,9 +59,21 @@ Partial Class LWAR
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.FileToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DocumentationToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectSiteToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SourceCodeToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CheckForIpdatesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AboutLWARToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.GroupBoxStart.SuspendLayout()
         Me.NotificationContext.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'lblProduct
@@ -370,6 +382,72 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(554, 24)
+        Me.MenuStrip1.TabIndex = 11
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'FileToolStripMenuItem1
+        '
+        Me.FileToolStripMenuItem1.Name = "FileToolStripMenuItem1"
+        Me.FileToolStripMenuItem1.Size = New System.Drawing.Size(37, 20)
+        Me.FileToolStripMenuItem1.Text = "&File"
+        '
+        'ToolsToolStripMenuItem1
+        '
+        Me.ToolsToolStripMenuItem1.Name = "ToolsToolStripMenuItem1"
+        Me.ToolsToolStripMenuItem1.Size = New System.Drawing.Size(48, 20)
+        Me.ToolsToolStripMenuItem1.Text = "&Tools"
+        '
+        'HelpToolStripMenuItem1
+        '
+        Me.HelpToolStripMenuItem1.Name = "HelpToolStripMenuItem1"
+        Me.HelpToolStripMenuItem1.Size = New System.Drawing.Size(44, 20)
+        Me.HelpToolStripMenuItem1.Text = "&Help"
+        '
+        'DocumentationToolStripMenuItem1
+        '
+        Me.DocumentationToolStripMenuItem1.Name = "DocumentationToolStripMenuItem1"
+        Me.DocumentationToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.DocumentationToolStripMenuItem1.Text = "&Documentation"
+        '
+        'ProjectSiteToolStripMenuItem1
+        '
+        Me.ProjectSiteToolStripMenuItem1.Name = "ProjectSiteToolStripMenuItem1"
+        Me.ProjectSiteToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.ProjectSiteToolStripMenuItem1.Text = "&Project site"
+        '
+        'SourceCodeToolStripMenuItem1
+        '
+        Me.SourceCodeToolStripMenuItem1.Name = "SourceCodeToolStripMenuItem1"
+        Me.SourceCodeToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.SourceCodeToolStripMenuItem1.Text = "&Source code"
+        '
+        'CheckForIpdatesToolStripMenuItem
+        '
+        Me.CheckForIpdatesToolStripMenuItem.Name = "CheckForIpdatesToolStripMenuItem"
+        Me.CheckForIpdatesToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.CheckForIpdatesToolStripMenuItem.Text = "&Check for updates"
+        '
+        'AboutLWARToolStripMenuItem1
+        '
+        Me.AboutLWARToolStripMenuItem1.Name = "AboutLWARToolStripMenuItem1"
+        Me.AboutLWARToolStripMenuItem1.Size = New System.Drawing.Size(170, 22)
+        Me.AboutLWARToolStripMenuItem1.Text = "&About LWAR"
+        '
+        'ToolStripSeparator3
+        '
+        Me.ToolStripSeparator3.Name = "ToolStripSeparator3"
+        Me.ToolStripSeparator3.Size = New System.Drawing.Size(167, 6)
+        '
+        'ToolStripSeparator4
+        '
+        Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
+        Me.ToolStripSeparator4.Size = New System.Drawing.Size(167, 6)
+        '
         'LWAR
         '
         Me.AcceptButton = Me.btnStart
@@ -377,6 +455,7 @@ Partial Class LWAR
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(554, 371)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.GroupBoxStart)
         Me.Controls.Add(Me.btnHide)
         Me.Controls.Add(Me.btnStart)
@@ -386,6 +465,7 @@ Partial Class LWAR
         Me.Controls.Add(Me.imgLogo)
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "LWAR"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Start - LWAR"
@@ -393,6 +473,8 @@ Partial Class LWAR
         Me.GroupBoxStart.PerformLayout()
         Me.NotificationContext.ResumeLayout(False)
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -432,5 +514,16 @@ Partial Class LWAR
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CheckForUpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
+    Friend WithEvents FileToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents HelpToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents DocumentationToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator4 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ProjectSiteToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents SourceCodeToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator3 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents CheckForIpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AboutLWARToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
 
 End Class

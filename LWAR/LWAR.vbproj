@@ -129,9 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Preferences.resx">
       <DependentUpon>Preferences.vb</DependentUpon>
@@ -182,6 +182,72 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2014-05-14_204202_2.ico" />
+    <None Include="Resources\1371833561_help-browser.png" />
+    <None Include="Resources\1371833355_go-home.png" />
+    <None Include="Resources\1371833067_go-next.png" />
+    <None Include="Resources\1360023973_edit-copy.png" />
+    <None Include="Resources\1360023934_edit-paste.png" />
+    <None Include="Resources\1360022930_edit-cut.png" />
+    <None Include="Resources\1398642052_emblem-favorite.png" />
+    <None Include="Resources\1398638918_document-properties.png" />
+    <None Include="Resources\1387147129_utilities-system-monitor.png" />
+    <None Include="Resources\1387147127_edit-find-replace.png" />
+    <None Include="Resources\1387147104_video-display.png" />
+    <None Include="Resources\1387146817_tab-new.png" />
+    <None Include="Resources\1387141003_help-browser.png" />
+    <None Include="Resources\1387140508_preferences-system-windows.png" />
+    <None Include="Resources\1387140136_process-stop.png" />
+    <None Include="Resources\1387139872_window-new.png" />
+    <None Include="Resources\1387139554_edit-cut.png" />
+    <None Include="Resources\1387139507_edit-paste.png" />
+    <None Include="Resources\1387139504_edit-select-all.png" />
+    <None Include="Resources\1387137364_edit-copy.png" />
+    <None Include="Resources\1387135890_system-log-out.png" />
+    <None Include="Resources\1387135471_edit-clear.png" />
+    <None Include="Resources\1371856288_preferences-system.png" />
+    <None Include="Resources\1371856271_format-justify-center.png" />
+    <None Include="Resources\1371846672_go-bottom.png" />
+    <None Include="Resources\1371846583_internet-web-browser.png" />
+    <None Include="Resources\1371833937_text-html.png" />
+    <None Include="Resources\1371833894_go-jump.png" />
+    <None Include="Resources\1371833687_go-previous.png" />
+    <None Include="Resources\1371833596_dialog-error.png" />
+    <None Include="Resources\1371833577_view-refresh.png" />
+    <None Include="images\ir6RDbtTesYUv.png" />
+    <None Include="images\ibvUgRoRTsO1bf.png" />
+    <None Include="images\ibvUgRoRTsO1bf.ico" />
+    <None Include="images\1398642052_emblem-favorite.png" />
+    <None Include="images\1398638918_document-properties.png" />
+    <None Include="images\1387147129_utilities-system-monitor.png" />
+    <None Include="images\1387147127_edit-find-replace.png" />
+    <None Include="images\1387147104_video-display.png" />
+    <None Include="images\1387146817_tab-new.png" />
+    <None Include="images\1387141003_help-browser.png" />
+    <None Include="images\1387140508_preferences-system-windows.png" />
+    <None Include="images\1387140136_process-stop.png" />
+    <None Include="images\1387139872_window-new.png" />
+    <None Include="images\1387139554_edit-cut.png" />
+    <None Include="images\1387139507_edit-paste.png" />
+    <None Include="images\1387139504_edit-select-all.png" />
+    <None Include="images\1387137364_edit-copy.png" />
+    <None Include="images\1387135890_system-log-out.png" />
+    <None Include="images\1387135471_edit-clear.png" />
+    <None Include="images\1371856288_preferences-system.png" />
+    <None Include="images\1371856271_format-justify-center.png" />
+    <None Include="images\1371846672_go-bottom.png" />
+    <None Include="images\1371846583_internet-web-browser.png" />
+    <None Include="images\1371833937_text-html.png" />
+    <None Include="images\1371833894_go-jump.png" />
+    <None Include="images\1371833687_go-previous.png" />
+    <None Include="images\1371833596_dialog-error.png" />
+    <None Include="images\1371833577_view-refresh.png" />
+    <None Include="images\1371833561_help-browser.png" />
+    <None Include="images\1371833355_go-home.png" />
+    <None Include="images\1371833067_go-next.png" />
+    <None Include="images\1360023973_edit-copy.png" />
+    <None Include="images\1360023934_edit-paste.png" />
+    <None Include="images\1360022930_edit-cut.png" />
+    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

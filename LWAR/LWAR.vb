@@ -14,7 +14,7 @@
             txtFile.Text = ""
         End If
     End Sub
-    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles QuitLWARToolStripMenuItem.Click, btnCancel.Click, NotificationContextQuit.Click
+    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
         Application.Exit()
     End Sub
 

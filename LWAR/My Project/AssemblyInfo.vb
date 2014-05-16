@@ -11,11 +11,11 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("LWAR")> 
-<Assembly: AssemblyDescription("")> 
+<Assembly: AssemblyDescription("Launch With Admin Rights")> 
 <Assembly: AssemblyCompany("DeavmiOSS")> 
 <Assembly: AssemblyProduct("LWAR")> 
-<Assembly: AssemblyCopyright("")> 
-<Assembly: AssemblyTrademark("")> 
+<Assembly: AssemblyCopyright("DeavmiOSS")> 
+<Assembly: AssemblyTrademark("DeavmiOSS")> 
 
 <Assembly: ComVisible(False)> 
 

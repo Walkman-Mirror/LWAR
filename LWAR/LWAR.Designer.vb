@@ -296,14 +296,14 @@ Partial Class LWAR
         '
         Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
-        Me.NotificationContext.Size = New System.Drawing.Size(177, 76)
+        Me.NotificationContext.Size = New System.Drawing.Size(177, 98)
         '
         'NotificationContextShowHide
         '
-        Me.NotificationContextShowHide.Image = Global.LWAR.My.Resources.Resources.eye_shown
+        Me.NotificationContextShowHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
         Me.NotificationContextShowHide.Name = "NotificationContextShowHide"
         Me.NotificationContextShowHide.Size = New System.Drawing.Size(176, 22)
-        Me.NotificationContextShowHide.Text = "Show LWAR"
+        Me.NotificationContextShowHide.Text = "Hide LWAR"
         '
         'NotificationContextPreferences
         '

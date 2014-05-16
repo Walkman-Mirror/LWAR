@@ -43,7 +43,7 @@ Partial Class LWAR
         Me.btnHide = New System.Windows.Forms.Button()
         Me.GroupBoxStart = New System.Windows.Forms.GroupBox()
         Me.btnBrowse = New System.Windows.Forms.Button()
-        Me.txtFile = New System.Windows.Forms.TextBox()
+        Me.txtFileToOpen = New System.Windows.Forms.TextBox()
         Me.lblFile = New System.Windows.Forms.Label()
         Me.txtDomain = New System.Windows.Forms.TextBox()
         Me.lblDomain = New System.Windows.Forms.Label()
@@ -193,7 +193,7 @@ Partial Class LWAR
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GroupBoxStart.Controls.Add(Me.btnBrowse)
-        Me.GroupBoxStart.Controls.Add(Me.txtFile)
+        Me.GroupBoxStart.Controls.Add(Me.txtFileToOpen)
         Me.GroupBoxStart.Controls.Add(Me.lblFile)
         Me.GroupBoxStart.Controls.Add(Me.txtDomain)
         Me.GroupBoxStart.Controls.Add(Me.lblDomain)
@@ -218,16 +218,16 @@ Partial Class LWAR
         Me.btnBrowse.Text = "&Browse..."
         Me.btnBrowse.UseVisualStyleBackColor = True
         '
-        'txtFile
+        'txtFileToOpen
         '
-        Me.txtFile.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+        Me.txtFileToOpen.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.txtFile.Location = New System.Drawing.Point(86, 136)
-        Me.txtFile.Multiline = True
-        Me.txtFile.Name = "txtFile"
-        Me.txtFile.Size = New System.Drawing.Size(232, 20)
-        Me.txtFile.TabIndex = 7
+        Me.txtFileToOpen.Location = New System.Drawing.Point(86, 136)
+        Me.txtFileToOpen.Multiline = True
+        Me.txtFileToOpen.Name = "txtFileToOpen"
+        Me.txtFileToOpen.Size = New System.Drawing.Size(232, 20)
+        Me.txtFileToOpen.TabIndex = 7
         '
         'lblFile
         '
@@ -380,7 +380,7 @@ Partial Class LWAR
     Friend WithEvents GroupBoxStart As System.Windows.Forms.GroupBox
     Friend WithEvents txtUsername As System.Windows.Forms.TextBox
     Friend WithEvents lblUsername As System.Windows.Forms.Label
-    Friend WithEvents txtFile As System.Windows.Forms.TextBox
+    Friend WithEvents txtFileToOpen As System.Windows.Forms.TextBox
     Friend WithEvents lblFile As System.Windows.Forms.Label
     Friend WithEvents txtDomain As System.Windows.Forms.TextBox
     Friend WithEvents lblDomain As System.Windows.Forms.Label

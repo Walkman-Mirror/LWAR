@@ -10,6 +10,13 @@
 
     Private Sub StartLWAR(sender As Object, e As EventArgs) Handles btnStart.Click
         'start program
+        'Change the string time from insecure to secure.
+        Dim password As Security.SecureString = txtPassword.Text.ToString
+        If txtDomain.Text = "" Then
+            Process.Start(txtFileToOpen.Text.ToString, txtUsername.Text.ToString)
+        Else
+            Process.Start(txtFileToOpen.Text.ToString, txtUsername.Text.ToString, password, txtDomain.Text.ToString)
+        End If
     End Sub
 
     Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click
@@ -33,6 +40,6 @@
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
         OpenFileDialog1.ShowDialog()
-        txtFile.Text = OpenFileDialog1.FileName.ToString()
+        txtFileToOpen.Text = OpenFileDialog1.FileName.ToString()
     End Sub
 End Class

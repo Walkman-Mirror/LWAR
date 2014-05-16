@@ -12,7 +12,7 @@
         My.Settings.RememberStartContents = chkBoxRememberStartContents.Checked
         My.Settings.Save()
         Me.Hide()
-        If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon1.Visible = False Else LWAR.NotifyIcon1.Visible = True
+        If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon.Visible = False Else LWAR.NotifyIcon.Visible = True
     End Sub
 
     Private Sub CancelPreferences(sender As Object, e As EventArgs) Handles btnPrefCancel.Click

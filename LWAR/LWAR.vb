@@ -14,6 +14,7 @@
             txtFile.Text = ""
         End If
     End Sub
+
     Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
         Application.Exit()
     End Sub
@@ -71,10 +72,6 @@
 
     Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItem.Click
         Preferences.Show()
-    End Sub
-
-    Private Sub ProjectSiteToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProjectSiteToolStripMenuItem1.Click
-
     End Sub
 
     Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick

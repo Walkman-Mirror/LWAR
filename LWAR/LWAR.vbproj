@@ -93,6 +93,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="About.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="LWAR.vb">
       <SubType>Form</SubType>
@@ -120,6 +126,12 @@
       <DependentUpon>Preferences.vb</DependentUpon>
     </Compile>
     <Compile Include="Preferences.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProposedSettings.Designer.vb">
+      <DependentUpon>ProposedSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ProposedSettings.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

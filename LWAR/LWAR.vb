@@ -77,4 +77,11 @@
     Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
         Me.Show()
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        txtUsername.Text = ""
+        txtPassword.Text = ""
+        txtDomain.Text = ""
+        txtFile.Text = ""
+    End Sub
 End Class

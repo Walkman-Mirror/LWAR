@@ -78,6 +78,7 @@ Partial Class LWAR
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.GroupBoxStart.SuspendLayout()
         Me.NotificationContext.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,6 +110,7 @@ Partial Class LWAR
         Me.GroupBoxStart.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBoxStart.Controls.Add(Me.Button1)
         Me.GroupBoxStart.Controls.Add(Me.btnBrowse)
         Me.GroupBoxStart.Controls.Add(Me.txtFile)
         Me.GroupBoxStart.Controls.Add(Me.lblFile)
@@ -510,6 +512,17 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
+        'Button1
+        '
+        Me.Button1.Image = Global.LWAR.My.Resources.Resources._1387135471_edit_clear
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(376, 158)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "&Clear"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'LWAR
         '
         Me.AcceptButton = Me.btnStart
@@ -594,5 +607,6 @@ Partial Class LWAR
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CheckForUpdatesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

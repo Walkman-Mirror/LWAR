@@ -9,13 +9,13 @@
             Me.Hide()
             NotifyIcon.Visible = True
             NotificationContextShowHide.Text = "Show LWAR"
-            'NotificationContextShowHide.Image = "LWAR.My.Resources.Resources.eye_shown" 'Can't seem to get this to work, not important tho
+            NotificationContextShowHide.Image = My.Resources.eye_shown 'HA! got it to work, after fiddling around for ~30 mins. it's 5:00 AM, so going to bed.
             MeVisibility = False
         Else
             Me.Show()
-            'NotifyIcon.Visible = False  'Uncomment this to make the systray icon hide when showing LWAR
+            'NotifyIcon.Visible = False  'Uncomment this to make the systray icon hide when showing LWAR, aulthough that would make almost this whole sub redundant
             NotificationContextShowHide.Text = "Hide LWAR"
-            'NotificationContextShowHide.Image = "LWAR.My.Resources.Resources.eye_hidden"
+            NotificationContextShowHide.Image = My.Resources.eye_hidden
             MeVisibility = True
         End If
     End Sub

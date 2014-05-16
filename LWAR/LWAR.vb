@@ -70,8 +70,8 @@
         'Show about window
     End Sub
 
-    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItem.Click
-        Preferences.Show()
+    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItem1.Click
+        Preferences.ShowDialog()
     End Sub
 
     Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
@@ -87,5 +87,9 @@
 
     Private Sub AboutLWARToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click
         About.ShowDialog()
+    End Sub
+
+    Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
+        Process.Start("https://github.com/CampusTools/LWAR/issues/new")
     End Sub
 End Class

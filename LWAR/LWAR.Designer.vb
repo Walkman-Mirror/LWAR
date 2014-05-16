@@ -79,6 +79,7 @@ Partial Class LWAR
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBoxStart.SuspendLayout()
         Me.NotificationContext.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -468,12 +469,13 @@ Partial Class LWAR
         '
         Me.PreferencesToolStripMenuItem1.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.PreferencesToolStripMenuItem1.Name = "PreferencesToolStripMenuItem1"
-        Me.PreferencesToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
+        Me.PreferencesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
         Me.PreferencesToolStripMenuItem1.Text = "&Preferences"
+        Me.PreferencesToolStripMenuItem1.ToolTipText = "Tweak LWAR to your needs"
         '
         'HelpToolStripMenuItem2
         '
-        Me.HelpToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DocumentationToolStripMenuItem2, Me.ToolStripSeparator5, Me.ProjectsSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator6, Me.CheckForUpdatesToolStripMenuItem1, Me.AboutLWARToolStripMenuItem})
+        Me.HelpToolStripMenuItem2.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubmitFeedbackToolStripMenuItem, Me.DocumentationToolStripMenuItem2, Me.ToolStripSeparator5, Me.ProjectsSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator6, Me.CheckForUpdatesToolStripMenuItem1, Me.AboutLWARToolStripMenuItem})
         Me.HelpToolStripMenuItem2.Name = "HelpToolStripMenuItem2"
         Me.HelpToolStripMenuItem2.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem2.Text = "&Help"
@@ -520,8 +522,17 @@ Partial Class LWAR
         '
         Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
         Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
+        Me.AboutLWARToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
+        '
+        'SubmitFeedbackToolStripMenuItem
+        '
+        Me.SubmitFeedbackToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
+        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
+        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.SubmitFeedbackToolStripMenuItem.Text = "Submit &feedback"
+        Me.SubmitFeedbackToolStripMenuItem.ToolTipText = "Submit issues, feedback and requests"
         '
         'LWAR
         '
@@ -538,8 +549,10 @@ Partial Class LWAR
         Me.Controls.Add(Me.lblCurrentPage)
         Me.Controls.Add(Me.lblProduct)
         Me.Controls.Add(Me.imgLogo)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.HelpButton = True
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximizeBox = False
         Me.Name = "LWAR"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Start - LWAR"
@@ -608,5 +621,6 @@ Partial Class LWAR
     Friend WithEvents CheckForUpdatesToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

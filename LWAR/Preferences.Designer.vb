@@ -30,6 +30,7 @@ Partial Class Preferences
         Me.chkBoxIconShowOnStartup = New System.Windows.Forms.CheckBox()
         Me.grpPrefMain = New System.Windows.Forms.GroupBox()
         Me.chkBoxRememberStartContents = New System.Windows.Forms.CheckBox()
+        Me.btnPrefReset = New System.Windows.Forms.Button()
         Me.grpPrefIcon.SuspendLayout()
         Me.grpPrefMain.SuspendLayout()
         Me.SuspendLayout()
@@ -111,6 +112,16 @@ Partial Class Preferences
         Me.chkBoxRememberStartContents.Text = "Remember Starting fields"
         Me.chkBoxRememberStartContents.UseVisualStyleBackColor = True
         '
+        'btnPrefReset
+        '
+        Me.btnPrefReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnPrefReset.Location = New System.Drawing.Point(12, 266)
+        Me.btnPrefReset.Name = "btnPrefReset"
+        Me.btnPrefReset.Size = New System.Drawing.Size(75, 23)
+        Me.btnPrefReset.TabIndex = 4
+        Me.btnPrefReset.Text = "&Reset"
+        Me.btnPrefReset.UseVisualStyleBackColor = True
+        '
         'Preferences
         '
         Me.AcceptButton = Me.btnPrefSave
@@ -118,6 +129,7 @@ Partial Class Preferences
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnPrefCancel
         Me.ClientSize = New System.Drawing.Size(400, 301)
+        Me.Controls.Add(Me.btnPrefReset)
         Me.Controls.Add(Me.grpPrefMain)
         Me.Controls.Add(Me.grpPrefIcon)
         Me.Controls.Add(Me.btnPrefSave)
@@ -145,4 +157,5 @@ Partial Class Preferences
     Friend WithEvents chkBoxIconShowOnStartup As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxHideIconWhenShowLWAR As System.Windows.Forms.CheckBox
     Friend WithEvents chkBoxRememberStartContents As System.Windows.Forms.CheckBox
+    Friend WithEvents btnPrefReset As System.Windows.Forms.Button
 End Class

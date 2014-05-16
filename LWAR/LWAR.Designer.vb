@@ -197,9 +197,9 @@ Partial Class LWAR
         'btnBrowse
         '
         Me.btnBrowse.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBrowse.Location = New System.Drawing.Point(376, 134)
+        Me.btnBrowse.Location = New System.Drawing.Point(376, 136)
         Me.btnBrowse.Name = "btnBrowse"
-        Me.btnBrowse.Size = New System.Drawing.Size(75, 35)
+        Me.btnBrowse.Size = New System.Drawing.Size(75, 33)
         Me.btnBrowse.TabIndex = 11
         Me.btnBrowse.Text = "&Browse..."
         Me.btnBrowse.UseVisualStyleBackColor = True

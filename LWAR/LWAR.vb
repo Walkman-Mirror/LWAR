@@ -15,7 +15,7 @@
         End If
     End Sub
 
-    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click
+    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
         Application.Exit()
     End Sub
 
@@ -83,5 +83,9 @@
         txtPassword.Text = ""
         txtDomain.Text = ""
         txtFile.Text = ""
+    End Sub
+
+    Private Sub AboutLWARToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click
+        About.ShowDialog()
     End Sub
 End Class

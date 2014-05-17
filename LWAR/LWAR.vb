@@ -64,6 +64,11 @@
         End If
 
         'start program
+        If txtDomain.Text = "" Then
+            Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
+        Else
+              Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+        End If
     End Sub
 
     Private Sub ShowAboutLWAR(sender As Object, e As EventArgs)

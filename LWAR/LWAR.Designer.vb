@@ -72,6 +72,7 @@ Partial Class LWAR
         Me.ToolsToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.PreferencesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.DocumentationToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
         Me.ProjectsSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -79,7 +80,6 @@ Partial Class LWAR
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBoxStart.SuspendLayout()
         Me.NotificationContext.SuspendLayout()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -248,7 +248,7 @@ Partial Class LWAR
         Me.NotificationContextShowHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
         Me.NotificationContextShowHide.Name = "NotificationContextShowHide"
         Me.NotificationContextShowHide.Size = New System.Drawing.Size(167, 22)
-        Me.NotificationContextShowHide.Text = "Hide LWAR"
+        Me.NotificationContextShowHide.Text = "&Hide LWAR"
         '
         'NotificationContextPreferences
         '
@@ -469,7 +469,7 @@ Partial Class LWAR
         '
         Me.PreferencesToolStripMenuItem1.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.PreferencesToolStripMenuItem1.Name = "PreferencesToolStripMenuItem1"
-        Me.PreferencesToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.PreferencesToolStripMenuItem1.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem1.Text = "&Preferences"
         Me.PreferencesToolStripMenuItem1.ToolTipText = "Tweak LWAR to your needs"
         '
@@ -479,6 +479,14 @@ Partial Class LWAR
         Me.HelpToolStripMenuItem2.Name = "HelpToolStripMenuItem2"
         Me.HelpToolStripMenuItem2.Size = New System.Drawing.Size(44, 20)
         Me.HelpToolStripMenuItem2.Text = "&Help"
+        '
+        'SubmitFeedbackToolStripMenuItem
+        '
+        Me.SubmitFeedbackToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
+        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
+        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.SubmitFeedbackToolStripMenuItem.Text = "Submit &feedback"
+        Me.SubmitFeedbackToolStripMenuItem.ToolTipText = "Submit issues, feedback and requests"
         '
         'DocumentationToolStripMenuItem2
         '
@@ -525,14 +533,6 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
-        '
-        'SubmitFeedbackToolStripMenuItem
-        '
-        Me.SubmitFeedbackToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
-        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
-        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
-        Me.SubmitFeedbackToolStripMenuItem.Text = "Submit &feedback"
-        Me.SubmitFeedbackToolStripMenuItem.ToolTipText = "Submit issues, feedback and requests"
         '
         'LWAR
         '

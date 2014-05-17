@@ -23,5 +23,8 @@
     <Setting Name="RememberStartContents" Type="System.String" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20000</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

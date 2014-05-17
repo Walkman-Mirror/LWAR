@@ -1,4 +1,5 @@
 ﻿Public Class LWAR
+    'What is a boolean, like a string but made for "true" and "false" values
     Dim MeVisibility As Boolean = True
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
@@ -23,13 +24,13 @@
         If MeVisibility = True Then
             Me.Hide()
             NotifyIcon.Visible = True
-            NotificationContextShowHide.Text = "Show LWAR"
+            NotificationContextShowHide.Text = "&Show LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_shown 'HA! got it to work, after fiddling around for ~30 mins. go follow me on http://twitter.com/Walkman100
             MeVisibility = False
         Else
             Me.Show()
             If My.Settings.IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
-            NotificationContextShowHide.Text = "Hide LWAR"
+            NotificationContextShowHide.Text = "&Hide LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_hidden
             MeVisibility = True
         End If
@@ -67,7 +68,7 @@
         If txtDomain.Text = "" Then
             Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
         Else
-              Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+            Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
         End If
     End Sub
 
@@ -96,5 +97,9 @@
 
     Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
         Process.Start("https://github.com/CampusTools/LWAR/issues/new")
+    End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem1.Click
+        Updates.ShowDialog()
     End Sub
 End Class

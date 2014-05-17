@@ -1,6 +1,6 @@
 ﻿Public Class LWAR
     'What is a boolean, like a string but made for "true" and "false" values
-    Dim MeVisibility As Boolean = True
+    'Dim MeVisibility As Boolean = True
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
         If My.Settings.RememberStartContents = True Then
@@ -21,13 +21,13 @@
             NotifyIcon.Visible = True
             NotificationContextShowHide.Text = "&Show LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_shown 'HA! got it to work, after fiddling around for ~30 mins. go follow me on http://twitter.com/Walkman100
-            MeVisibility = False
+            Me.Visible = False
         Else
             Me.Show()
             If My.Settings.IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
             NotificationContextShowHide.Text = "&Hide LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_hidden
-            MeVisibility = True
+            Me.Visible = True
         End If
     End Sub
 

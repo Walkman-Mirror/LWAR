@@ -8,11 +8,6 @@
             txtPassword.Text = My.Settings.Password
             txtDomain.Text = My.Settings.Domain
             txtFile.Text = My.Settings.File
-        Else
-            txtUsername.Text = ""
-            txtPassword.Text = ""
-            txtDomain.Text = ""
-            txtFile.Text = ""
         End If
     End Sub
 

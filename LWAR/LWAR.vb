@@ -40,15 +40,15 @@
         'Show Documentation, URl??
     End Sub
     Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs)
-        Process.Start("http://campustools.github.io/LWAR")
+        Process.Start("https://campustools.github.io/LWAR")
     End Sub
 
     Private Sub OpenSourceCode(sender As Object, e As EventArgs)
-        Process.Start("http://www.github.com/CampusTools/LWAR")
+        Process.Start("https://github.com/CampusTools/LWAR")
     End Sub
 
     Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
-        Process.Start("http://www.github.com/CampusTools/LWAR/releases")
+        Process.Start("https://github.com/CampusTools/LWAR/releases")
     End Sub
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click

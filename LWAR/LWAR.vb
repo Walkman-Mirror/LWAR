@@ -57,13 +57,6 @@
     End Sub
 
     Private Sub StartLWAR(sender As Object, e As EventArgs) Handles btnStart.Click
-        If My.Settings.RememberStartContents = True Then
-            My.Settings.Username = txtUsername.Text
-            My.Settings.Password = txtPassword.Text
-            My.Settings.Domain = txtDomain.Text
-            My.Settings.File = txtFile.Text
-        End If
-
         'start program (Still working on this (Uncomment the code to allow it to be executed at run time.
         ' If txtDomain.Text = "" Then
         'Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
@@ -101,5 +94,29 @@
 
     Private Sub CheckForUpdatesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem1.Click
         Updates.ShowDialog()
+    End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+        If My.Settings.RememberStartContents = True Then
+            My.Settings.Username = txtUsername.Text
+        End If
+    End Sub
+
+    Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
+        If My.Settings.RememberStartContents = True Then
+            My.Settings.Username = txtFile.Text
+        End If
+    End Sub
+
+    Private Sub txtDomain_TextChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
+        If My.Settings.RememberStartContents = True Then
+            My.Settings.Username = txtDomain.Text
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+        If My.Settings.RememberStartContents = True Then
+            My.Settings.Username = txtPassword.Text
+        End If
     End Sub
 End Class

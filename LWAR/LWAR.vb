@@ -16,7 +16,7 @@
     End Sub
 
     Private Sub ShowOrHideLWAR(sender As Object, e As EventArgs) Handles btnHide.Click, NotificationContextShowHide.Click
-        If MeVisibility = True Then
+        If Me.Visible = True Then
             Me.Hide()
             NotifyIcon.Visible = True
             NotificationContextShowHide.Text = "&Show LWAR"

@@ -94,24 +94,28 @@
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         If My.Settings.RememberStartContents = True Then
             My.Settings.Username = txtUsername.Text
+            My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
         If My.Settings.RememberStartContents = True Then
-            My.Settings.Username = txtFile.Text
+            My.Settings.File = txtFile.Text
+            My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtDomain_TextChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
         If My.Settings.RememberStartContents = True Then
-            My.Settings.Username = txtDomain.Text
+            My.Settings.Domain = txtDomain.Text
+            My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
         If My.Settings.RememberStartContents = True Then
-            My.Settings.Username = txtPassword.Text
+            My.Settings.Password = txtPassword.Text
+            My.Settings.Save()
         End If
     End Sub
 End Class

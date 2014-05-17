@@ -64,12 +64,12 @@
             My.Settings.File = txtFile.Text
         End If
 
-        'start program
-        If txtDomain.Text = "" Then
-            Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
-        Else
-            Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
-        End If
+        'start program (Still working on this (Uncomment the code to allow it to be executed at run time.
+        ' If txtDomain.Text = "" Then
+        'Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
+        ' Else
+        ' Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+        ' End If
     End Sub
 
     Private Sub ShowAboutLWAR(sender As Object, e As EventArgs)

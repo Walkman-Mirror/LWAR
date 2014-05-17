@@ -24,7 +24,7 @@ Public Class Updates
     End Sub
 
     Private Sub Start()
-        WebBrowser1.Navigate("https://deavmi.github.io/DogeCoin-Live/current_version.txt")
+        WebBrowser1.Navigate("https://CampusTools.github.io/LWAR/current_version.txt")
     End Sub
     Private Sub Updates_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         your_version_text.Text = "Your version: v" & My.Application.Info.Version.ToString
@@ -60,12 +60,12 @@ Public Class Updates
     End Sub
 
     Private Sub Downloader_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles Downloader.DoWork
-        My.Computer.Network.DownloadFile("https://deavmi.github.io/DogeCoin-Live/DCL-Updater.exe", "DCL-Updater.exe", False, False, False, connectionTimeout:=My.Settings.LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout, overwrite:=True)
+        My.Computer.Network.DownloadFile("https://CampusTools.github.io/LWAR/LWAR-Updater.exe", "LWAR-Updater.exe", False, False, False, connectionTimeout:=My.Settings.LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout, overwrite:=True)
     End Sub
 
     Private Sub Downloader_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Downloader.RunWorkerCompleted
         MsgBox("Click Ok to download and install the updates.")
-        Process.Start("DCL-Updater.exe")
+        Process.Start("LWAR-Updater.exe")
         Application.Exit()
     End Sub
 End Class

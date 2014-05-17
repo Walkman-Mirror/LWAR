@@ -390,12 +390,12 @@ Partial Class LWAR
         'btnStart
         '
         Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Image = Global.LWAR.My.Resources.Resources.go_right_d
+        Me.btnStart.Image = Global.LWAR.My.Resources.Resources._1371833687_go_previous
         Me.btnStart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnStart.Location = New System.Drawing.Point(386, 336)
         Me.btnStart.Name = "btnStart"
         Me.btnStart.Size = New System.Drawing.Size(75, 23)
-        Me.btnStart.TabIndex = 9
+        Me.btnStart.TabIndex = 13
         Me.btnStart.Text = "&Start"
         Me.btnStart.UseVisualStyleBackColor = True
         '
@@ -403,12 +403,12 @@ Partial Class LWAR
         '
         Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources.Exit2
+        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
         Me.btnCancel.Location = New System.Drawing.Point(467, 336)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 10
+        Me.btnCancel.TabIndex = 14
         Me.btnCancel.Text = "    &Quit"
         Me.btnCancel.UseVisualStyleBackColor = True
         '
@@ -420,7 +420,7 @@ Partial Class LWAR
         Me.btnHide.Location = New System.Drawing.Point(12, 336)
         Me.btnHide.Name = "btnHide"
         Me.btnHide.Size = New System.Drawing.Size(75, 23)
-        Me.btnHide.TabIndex = 8
+        Me.btnHide.TabIndex = 15
         Me.btnHide.Text = "&Hide"
         Me.btnHide.UseVisualStyleBackColor = True
         '

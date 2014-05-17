@@ -50,8 +50,8 @@
         txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
     End Sub
 
-    Private Sub StartLWAR(sender As Object, e As EventArgs) Handles btnStart.Click
-        'start program (Still working on this (Uncomment the code to allow it to be executed at run time.
+    Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
+        'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.
         ' If txtDomain.Text = "" Then
         'Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
         ' Else

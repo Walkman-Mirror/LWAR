@@ -1,6 +1,5 @@
 ﻿Public Class LWAR
-    'What is a boolean, like a string but made for "true" and "false" values
-    'Dim MeVisibility As Boolean = True
+
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
         If My.Settings.RememberStartContents = True Then

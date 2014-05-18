@@ -14,17 +14,20 @@
     <Setting Name="File" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="IconOnStartup" Type="System.String" Scope="User">
+    <Setting Name="Enviro_IconOnStartup" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="IconHideOnShowLWAR" Type="System.String" Scope="User">
+    <Setting Name="Enviro_IconHideOnShowLWAR" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="RememberStartContents" Type="System.String" Scope="User">
+    <Setting Name="Enviro_RememberStartContents" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>
     </Setting>
-    <Setting Name="LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout" Type="System.Int32" Scope="User">
+    <Setting Name="Updates_DownloadUpdaterConnectionTimeout" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">20000</Value>
+    </Setting>
+    <Setting Name="Enviro_AutoAssignUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">true</Value>
     </Setting>
   </Settings>
 </SettingsFile>

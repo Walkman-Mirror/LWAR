@@ -1,13 +1,14 @@
 ﻿Public Class LWAR
 
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
-        If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
-        If My.Settings.RememberStartContents = True Then
+        If My.Settings.Enviro_IconOnStartup = True Then NotifyIcon.Visible = True
+        If My.Settings.Enviro_RememberStartContents = True Then
             txtUsername.Text = My.Settings.Username.ToString
             txtPassword.Text = My.Settings.Password.ToString
             txtDomain.Text = My.Settings.Domain.ToString
             txtFile.Text = My.Settings.File.ToString
         End If
+        If My.Settings.Enviro_AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
     End Sub
 
     Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
@@ -23,7 +24,7 @@
             Me.Visible = False
         Else
             Me.Show()
-            If My.Settings.IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
+            If My.Settings.Enviro_IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
             NotificationContextShowHide.Text = "&Hide LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_hidden
             Me.Visible = True
@@ -104,28 +105,28 @@
     End Sub
 
     Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-        If My.Settings.RememberStartContents = True Then
+        If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.Username = txtUsername.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
-        If My.Settings.RememberStartContents = True Then
+        If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.File = txtFile.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtDomain_TextChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
-        If My.Settings.RememberStartContents = True Then
+        If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.Domain = txtDomain.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        If My.Settings.RememberStartContents = True Then
+        If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.Password = txtPassword.Text
             My.Settings.Save()
         End If

@@ -102,51 +102,63 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property IconOnStartup() As String
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
+        Public Property Enviro_IconOnStartup() As String
             Get
-                Return CType(Me("IconOnStartup"),String)
+                Return CType(Me("Enviro_IconOnStartup"), String)
             End Get
-            Set
-                Me("IconOnStartup") = value
+            Set(value As String)
+                Me("Enviro_IconOnStartup") = value
             End Set
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property IconHideOnShowLWAR() As String
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
+        Public Property Enviro_IconHideOnShowLWAR() As String
             Get
-                Return CType(Me("IconHideOnShowLWAR"),String)
+                Return CType(Me("Enviro_IconHideOnShowLWAR"), String)
             End Get
-            Set
-                Me("IconHideOnShowLWAR") = value
+            Set(value As String)
+                Me("Enviro_IconHideOnShowLWAR") = value
             End Set
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
-        Public Property RememberStartContents() As String
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
+        Public Property Enviro_RememberStartContents() As String
             Get
-                Return CType(Me("RememberStartContents"),String)
+                Return CType(Me("Enviro_RememberStartContents"), String)
             End Get
-            Set
-                Me("RememberStartContents") = value
+            Set(value As String)
+                Me("Enviro_RememberStartContents") = value
             End Set
         End Property
-        
-        <Global.System.Configuration.UserScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("20000")>  _
-        Public Property LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout() As Integer
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("20000")> _
+        Public Property Updates_DownloadUpdaterConnectionTimeout() As Integer
             Get
-                Return CType(Me("LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout"),Integer)
+                Return CType(Me("Updates_DownloadUpdaterConnectionTimeout"), Integer)
             End Get
-            Set
-                Me("LWAR_ENVIRONMENT_Updates_DownloadUpdaterConnectionTimeout") = value
+            Set(value As Integer)
+                Me("Updates_DownloadUpdaterConnectionTimeout") = value
+            End Set
+        End Property
+
+        <Global.System.Configuration.UserScopedSettingAttribute(), _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
+        Public Property Enviro_AutoAssignUsername() As String
+            Get
+                Return CType(Me("Enviro_AutoAssignUsername"), String)
+            End Get
+            Set(value As String)
+                Me("Enviro_AutoAssignUsername") = value
             End Set
         End Property
     End Class

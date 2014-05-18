@@ -39,6 +39,8 @@ Partial Class LWAR
         Me.lblUsername = New System.Windows.Forms.Label()
         Me.NotifyIcon = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.NotificationContext = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.StartProgramToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
         Me.NotificationContextShowHide = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotificationContextPreferences = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparatorNotify1 = New System.Windows.Forms.ToolStripSeparator()
@@ -239,9 +241,20 @@ Partial Class LWAR
         '
         'NotificationContext
         '
-        Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
+        Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartProgramToolStripMenuItem, Me.ToolStripSeparator7, Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
-        Me.NotificationContext.Size = New System.Drawing.Size(168, 76)
+        Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
+        '
+        'StartProgramToolStripMenuItem
+        '
+        Me.StartProgramToolStripMenuItem.Name = "StartProgramToolStripMenuItem"
+        Me.StartProgramToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.StartProgramToolStripMenuItem.Text = "&Start program"
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(164, 6)
         '
         'NotificationContextShowHide
         '
@@ -622,5 +635,7 @@ Partial Class LWAR
     Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents StartProgramToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
 
 End Class

@@ -47,7 +47,6 @@
 
     Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
         OpenFileDialogBrowse.ShowDialog()
-        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
     End Sub
 
     Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
@@ -130,5 +129,14 @@
             My.Settings.Password = txtPassword.Text
             My.Settings.Save()
         End If
+    End Sub
+
+    Private Sub OpenFileDialogBrowse_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialogBrowse.FileOk
+        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
+    End Sub
+
+    Private Sub StartProgramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartProgramToolStripMenuItem.Click
+        OpenFileDialogBrowse.ShowDialog()
+        Me.Show()
     End Sub
 End Class

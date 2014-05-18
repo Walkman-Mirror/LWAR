@@ -15,7 +15,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="IconOnStartup" Type="System.String" Scope="User">
-      <Value Profile="(Default)">false</Value>
+      <Value Profile="(Default)">true</Value>
     </Setting>
     <Setting Name="IconHideOnShowLWAR" Type="System.String" Scope="User">
       <Value Profile="(Default)">true</Value>

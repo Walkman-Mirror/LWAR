@@ -71,6 +71,7 @@ Partial Class Updates
         '
         'PictureBox1
         '
+        Me.PictureBox1.Image = Global.LWAR.My.Resources.Resources._1400410566_application_pgp_signature
         Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(185, 94)

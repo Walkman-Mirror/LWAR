@@ -64,7 +64,7 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>2014-05-14_204202_2.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\1400410576_24736.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -207,6 +207,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="2014-05-14_204202_2.ico" />
+    <None Include="Resources\1400410576_24736.ico" />
+    <None Include="Resources\1400410566_application-pgp-signature.png" />
     <None Include="Resources\1371833561_help-browser.png" />
     <None Include="Resources\1371833355_go-home.png" />
     <None Include="Resources\1371833067_go-next.png" />

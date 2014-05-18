@@ -104,7 +104,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("false")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("true")>  _
         Public Property IconOnStartup() As String
             Get
                 Return CType(Me("IconOnStartup"),String)

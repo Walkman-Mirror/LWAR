@@ -62,10 +62,6 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
-        Me.btnStart = New System.Windows.Forms.Button()
-        Me.btnCancel = New System.Windows.Forms.Button()
-        Me.btnHide = New System.Windows.Forms.Button()
-        Me.imgLogo = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem2 = New System.Windows.Forms.ToolStripMenuItem()
         Me.QuitLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -80,10 +76,14 @@ Partial Class LWAR
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
         Me.CheckForUpdatesToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.btnStart = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.btnHide = New System.Windows.Forms.Button()
+        Me.imgLogo = New System.Windows.Forms.PictureBox()
         Me.GroupBoxStart.SuspendLayout()
         Me.NotificationContext.SuspendLayout()
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'lblProduct
@@ -387,53 +387,6 @@ Partial Class LWAR
         Me.ToolStripSeparator4.Name = "ToolStripSeparator4"
         Me.ToolStripSeparator4.Size = New System.Drawing.Size(167, 6)
         '
-        'btnStart
-        '
-        Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnStart.Image = Global.LWAR.My.Resources.Resources._1371833687_go_previous
-        Me.btnStart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnStart.Location = New System.Drawing.Point(386, 336)
-        Me.btnStart.Name = "btnStart"
-        Me.btnStart.Size = New System.Drawing.Size(75, 23)
-        Me.btnStart.TabIndex = 13
-        Me.btnStart.Text = "&Start"
-        Me.btnStart.UseVisualStyleBackColor = True
-        '
-        'btnCancel
-        '
-        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
-        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
-        Me.btnCancel.Location = New System.Drawing.Point(467, 336)
-        Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancel.TabIndex = 14
-        Me.btnCancel.Text = "    &Quit"
-        Me.btnCancel.UseVisualStyleBackColor = True
-        '
-        'btnHide
-        '
-        Me.btnHide.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
-        Me.btnHide.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnHide.Location = New System.Drawing.Point(12, 336)
-        Me.btnHide.Name = "btnHide"
-        Me.btnHide.Size = New System.Drawing.Size(75, 23)
-        Me.btnHide.TabIndex = 15
-        Me.btnHide.Text = "&Hide"
-        Me.btnHide.UseVisualStyleBackColor = True
-        '
-        'imgLogo
-        '
-        Me.imgLogo.BackgroundImage = Global.LWAR.My.Resources.Resources._2014_05_14_204202
-        Me.imgLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.imgLogo.Location = New System.Drawing.Point(12, 27)
-        Me.imgLogo.Name = "imgLogo"
-        Me.imgLogo.Size = New System.Drawing.Size(89, 98)
-        Me.imgLogo.TabIndex = 1
-        Me.imgLogo.TabStop = False
-        '
         'MenuStrip1
         '
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem2, Me.ToolsToolStripMenuItem2, Me.HelpToolStripMenuItem2})
@@ -534,6 +487,53 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
+        'btnStart
+        '
+        Me.btnStart.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnStart.Image = Global.LWAR.My.Resources.Resources._1371833687_go_previous
+        Me.btnStart.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStart.Location = New System.Drawing.Point(386, 336)
+        Me.btnStart.Name = "btnStart"
+        Me.btnStart.Size = New System.Drawing.Size(75, 23)
+        Me.btnStart.TabIndex = 13
+        Me.btnStart.Text = "&Start"
+        Me.btnStart.UseVisualStyleBackColor = True
+        '
+        'btnCancel
+        '
+        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
+        Me.btnCancel.ImageAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.btnCancel.Location = New System.Drawing.Point(467, 336)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(75, 23)
+        Me.btnCancel.TabIndex = 14
+        Me.btnCancel.Text = "    &Quit"
+        Me.btnCancel.UseVisualStyleBackColor = True
+        '
+        'btnHide
+        '
+        Me.btnHide.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
+        Me.btnHide.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnHide.Location = New System.Drawing.Point(12, 336)
+        Me.btnHide.Name = "btnHide"
+        Me.btnHide.Size = New System.Drawing.Size(75, 23)
+        Me.btnHide.TabIndex = 15
+        Me.btnHide.Text = "&Hide"
+        Me.btnHide.UseVisualStyleBackColor = True
+        '
+        'imgLogo
+        '
+        Me.imgLogo.BackgroundImage = Global.LWAR.My.Resources.Resources._1400410566_application_pgp_signature
+        Me.imgLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.imgLogo.Location = New System.Drawing.Point(12, 27)
+        Me.imgLogo.Name = "imgLogo"
+        Me.imgLogo.Size = New System.Drawing.Size(89, 98)
+        Me.imgLogo.TabIndex = 1
+        Me.imgLogo.TabStop = False
+        '
         'LWAR
         '
         Me.AcceptButton = Me.btnStart
@@ -559,9 +559,9 @@ Partial Class LWAR
         Me.GroupBoxStart.ResumeLayout(False)
         Me.GroupBoxStart.PerformLayout()
         Me.NotificationContext.ResumeLayout(False)
-        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

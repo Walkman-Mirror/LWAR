@@ -241,4 +241,10 @@
   <data name="_1398642052_emblem_favorite" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1398642052_emblem-favorite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_1400410566_application_pgp_signature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1400410566_application-pgp-signature.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1400410576_24736" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1400410576_24736.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

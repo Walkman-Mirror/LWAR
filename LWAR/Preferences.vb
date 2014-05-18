@@ -11,8 +11,7 @@
         My.Settings.IconHideOnShowLWAR = chkBoxHideIconWhenShowLWAR.Checked
         My.Settings.RememberStartContents = chkBoxRememberStartContents.Checked
         My.Settings.Save()
-        'Isn't there meant to be an "End If" after this (ABSOLUTE MINDFUCK, NIGGA HOW YOU GOT THIS CORRECT, DAMN  I DON'T KNOW, LOL ;P)
-        If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon.Visible = False Else LWAR.NotifyIcon.Visible = True
+        Apply()
         Me.Close()
     End Sub
 
@@ -24,5 +23,10 @@
 
     Private Sub btnPrefReset_Click(sender As Object, e As EventArgs) Handles btnPrefReset.Click
         My.Settings.Reset()
+        Apply()
+    End Sub
+
+    Private Sub Apply()
+        If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon.Visible = False Else LWAR.NotifyIcon.Visible = True
     End Sub
 End Class

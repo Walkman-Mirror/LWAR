@@ -3,10 +3,10 @@
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
         If My.Settings.RememberStartContents = True Then
-            txtUsername.Text = My.Settings.Username
-            txtPassword.Text = My.Settings.Password
-            txtDomain.Text = My.Settings.Domain
-            txtFile.Text = My.Settings.File
+            txtUsername.Text = My.Settings.Username.ToString
+            txtPassword.Text = My.Settings.Password.ToString
+            txtDomain.Text = My.Settings.Domain.ToString
+            txtFile.Text = My.Settings.File.ToString
         End If
     End Sub
 
@@ -52,11 +52,17 @@
 
     Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
         'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.
-        ' If txtDomain.Text = "" Then
-        'Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
-        ' Else
-        ' Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
-        ' End If
+        If txtUsername.Text = "" And txtPassword.Text = "" And txtDomain.Text = "" And txtFile.Text = "" Then
+            MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
+        Else
+            If txtDomain.Text = "" Then
+                NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' ...", ToolTipIcon.Info)
+                'Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
+            Else
+                NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' on domain '" & txtDomain.Text.ToString & "' ...", ToolTipIcon.Info)
+                ' Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+            End If
+        End If
     End Sub
 
     Private Sub ShowAboutLWAR(sender As Object, e As EventArgs)

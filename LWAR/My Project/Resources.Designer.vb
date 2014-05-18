@@ -373,6 +373,26 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _1400410566_application_pgp_signature() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_1400410566_application_pgp_signature", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+        '''</summary>
+        Friend ReadOnly Property _1400410576_24736() As System.Drawing.Icon
+            Get
+                Dim obj As Object = ResourceManager.GetObject("_1400410576_24736", resourceCulture)
+                Return CType(obj,System.Drawing.Icon)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property _2014_05_14_204202() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("2014-05-14_204202", resourceCulture)

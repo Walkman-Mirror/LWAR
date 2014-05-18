@@ -101,6 +101,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Documentation.Designer.vb">
+      <DependentUpon>Documentation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Documentation.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="LWAR.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,9 @@
   <ItemGroup>
     <EmbeddedResource Include="About.resx">
       <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Documentation.resx">
+      <DependentUpon>Documentation.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LWAR.resx">
       <DependentUpon>LWAR.vb</DependentUpon>
@@ -274,7 +283,6 @@
     <None Include="images\1360023973_edit-copy.png" />
     <None Include="images\1360023934_edit-paste.png" />
     <None Include="images\1360022930_edit-cut.png" />
-    <None Include="Resources\Image1.bmp" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

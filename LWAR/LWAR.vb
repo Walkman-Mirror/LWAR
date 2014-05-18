@@ -140,4 +140,8 @@
         OpenFileDialogBrowse.ShowDialog()
         Me.Show()
     End Sub
+
+    Private Sub DocumentationToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem2.Click
+        Documentation.Show()
+    End Sub
 End Class

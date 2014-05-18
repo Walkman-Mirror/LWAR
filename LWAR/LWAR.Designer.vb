@@ -243,7 +243,7 @@ Partial Class LWAR
         '
         Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StartProgramToolStripMenuItem, Me.ToolStripSeparator7, Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
-        Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
+        Me.NotificationContext.Size = New System.Drawing.Size(168, 104)
         '
         'StartProgramToolStripMenuItem
         '

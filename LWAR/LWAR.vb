@@ -140,4 +140,15 @@
         End If
     End Sub
 
+<<<<<<< HEAD
+=======
+    Private Sub OpenFileDialogBrowse_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialogBrowse.FileOk
+        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
+    End Sub
+
+    Private Sub StartProgramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartProgramToolStripMenuItem.Click
+        OpenFileDialogBrowse.ShowDialog()
+        Me.Show()
+    End Sub
+>>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
 End Class

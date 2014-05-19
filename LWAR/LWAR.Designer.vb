@@ -247,6 +247,7 @@ Partial Class LWAR
         Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextStart, Me.ToolStripSeparator7, Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
 <<<<<<< HEAD
+<<<<<<< HEAD
         Me.NotificationContext.Size = New System.Drawing.Size(177, 104)
 =======
         Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
@@ -263,6 +264,15 @@ Partial Class LWAR
         Me.NotificationContextStart.Size = New System.Drawing.Size(176, 22)
 >>>>>>> parent of 3e5e385... Revert "Fixes"
         Me.NotificationContextStart.Text = "&Start program"
+=======
+        Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
+        '
+        'StartProgramToolStripMenuItem
+        '
+        Me.StartProgramToolStripMenuItem.Name = "StartProgramToolStripMenuItem"
+        Me.StartProgramToolStripMenuItem.Size = New System.Drawing.Size(167, 22)
+        Me.StartProgramToolStripMenuItem.Text = "&Start program"
+>>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
         '
         'ToolStripSeparator7
         '

@@ -150,5 +150,8 @@
         OpenFileDialogBrowse.ShowDialog()
         Me.Show()
     End Sub
+<<<<<<< HEAD
+>>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
+=======
 >>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
 End Class

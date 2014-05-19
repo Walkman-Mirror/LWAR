@@ -105,36 +105,36 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(), _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property Enviro_IconOnStartup() As String
+        Public Property IconOnStartup() As String
             Get
-                Return CType(Me("Enviro_IconOnStartup"), String)
+                Return CType(Me("IconOnStartup"), String)
             End Get
             Set(value As String)
-                Me("Enviro_IconOnStartup") = value
+                Me("IconOnStartup") = value
             End Set
         End Property
 
         <Global.System.Configuration.UserScopedSettingAttribute(), _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property Enviro_IconHideOnShowLWAR() As String
+        Public Property IconHideOnShowLWAR() As String
             Get
-                Return CType(Me("Enviro_IconHideOnShowLWAR"), String)
+                Return CType(Me("IconHideOnShowLWAR"), String)
             End Get
             Set(value As String)
-                Me("Enviro_IconHideOnShowLWAR") = value
+                Me("IconHideOnShowLWAR") = value
             End Set
         End Property
 
         <Global.System.Configuration.UserScopedSettingAttribute(), _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property Enviro_RememberStartContents() As String
+        Public Property RememberStartContents() As String
             Get
-                Return CType(Me("Enviro_RememberStartContents"), String)
+                Return CType(Me("RememberStartContents"), String)
             End Get
             Set(value As String)
-                Me("Enviro_RememberStartContents") = value
+                Me("RememberStartContents") = value
             End Set
         End Property
 
@@ -153,12 +153,12 @@ Namespace My
         <Global.System.Configuration.UserScopedSettingAttribute(), _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
          Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property Enviro_AutoAssignUsername() As String
+        Public Property AutoAssignUsername() As String
             Get
-                Return CType(Me("Enviro_AutoAssignUsername"), String)
+                Return CType(Me("AutoAssignUsername"), String)
             End Get
             Set(value As String)
-                Me("Enviro_AutoAssignUsername") = value
+                Me("AutoAssignUsername") = value
             End Set
         End Property
     End Class

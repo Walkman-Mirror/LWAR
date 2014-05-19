@@ -1,12 +1,21 @@
 ﻿Public Class LWAR
 
-    'window control
+    Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
+        If My.Settings.Enviro_IconOnStartup = True Then NotifyIcon.Visible = True
+        If My.Settings.Enviro_RememberStartContents = True Then
+            txtUsername.Text = My.Settings.Username.ToString
+            txtPassword.Text = My.Settings.Password.ToString
+            txtDomain.Text = My.Settings.Domain.ToString
+            txtFile.Text = My.Settings.File.ToString
+        End If
+        If My.Settings.Enviro_AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
+    End Sub
 
     Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
         Application.Exit()
     End Sub
 
-    Private Sub ShowOrHideLWAR(sender As Object, e As EventArgs) Handles btnHide.Click, NotificationContextShowHide.Click, NotifyIcon.MouseDoubleClick
+    Private Sub ShowOrHideLWAR(sender As Object, e As EventArgs) Handles btnHide.Click, NotificationContextShowHide.Click
         If Me.Visible = True Then
             Me.Hide()
             NotifyIcon.Visible = True
@@ -22,56 +31,28 @@
         End If
     End Sub
 
-    'show windows
-
-    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click, AboutLWARToolStripMenuItem1.Click
-        About.ShowDialog()
+    Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click
+        'Show Documentation, URl??
     End Sub
-
-    Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click, DocumentationToolStripMenuItemCurrent.Click
-        Documentation.Show()
-    End Sub
-
-    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItemCurrent.Click, PreferencesToolStripMenuItem.Click
-        Preferences.ShowDialog()
-    End Sub
-
-    Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click, CheckForUpdatesToolStripMenuItemCurrent.Click
-        Updates.ShowDialog()
-    End Sub
-
-    Private Sub BrowseForFile(sender As Object, e As EventArgs) Handles btnBrowse.Click
-        OpenFileDialogBrowse.ShowDialog()
-    End Sub
-
-    Private Sub BrowseForFile_Ok(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialogBrowse.FileOk
-        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
-    End Sub
-
-    'open webpages
-
-    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ProjectsSiteToolStripMenuItem.Click
+    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs)
         Process.Start("https://campustools.github.io/LWAR")
     End Sub
 
-    Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles SourceCodeToolStripMenuItem.Click
+    Private Sub OpenSourceCode(sender As Object, e As EventArgs)
         Process.Start("https://github.com/CampusTools/LWAR")
     End Sub
 
-    Private Sub SubmitFeedback(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
-        Process.Start("https://github.com/CampusTools/LWAR/issues/new")
+    Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click
+        Process.Start("https://github.com/CampusTools/LWAR/releases")
     End Sub
 
-    'run process
-
-    Private Sub StartFromNotificationContext(sender As Object, e As EventArgs) Handles NotificationContextStart.Click
-        OpenFileDialogBrowse.ShowDialog() 'can i ask wtf this does? how does it run the program? matthew
-        Me.Show()
+    Private Sub btnBrowse_Click(sender As Object, e As EventArgs) Handles btnBrowse.Click
+        OpenFileDialogBrowse.ShowDialog()
     End Sub
 
     Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
-        'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.))
-        If txtUsername.Text = "" Or txtPassword.Text = "" Or txtFile.Text = "" Then
+        'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.
+        If txtUsername.Text = "" And txtPassword.Text = "" And txtDomain.Text = "" And txtFile.Text = "" Then
             MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
         Else
             If txtDomain.Text = "" Then
@@ -92,52 +73,75 @@
         End If
     End Sub
 
-    'field management
-
-    Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
-        If My.Settings.Enviro_IconOnStartup = True Then NotifyIcon.Visible = True
-        If My.Settings.Enviro_RememberStartContents = True Then
-            txtUsername.Text = My.Settings.Username.ToString 'wtf is ToString
-            txtPassword.Text = My.Settings.Password.ToString
-            txtDomain.Text = My.Settings.Domain.ToString
-            txtFile.Text = My.Settings.File.ToString
-        End If
-        If My.Settings.Enviro_AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
+    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs)
+        'Show about window
     End Sub
 
-    Private Sub ClearFields(sender As Object, e As EventArgs) Handles btnClear.Click
+    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItem1.Click
+        Preferences.ShowDialog()
+    End Sub
+
+    Private Sub NotifyIcon_MouseDoubleClick(sender As Object, e As MouseEventArgs) Handles NotifyIcon.MouseDoubleClick
+        Me.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         txtUsername.Text = ""
         txtPassword.Text = ""
         txtDomain.Text = ""
         txtFile.Text = ""
     End Sub
 
-    Private Sub UsernameChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
+    Private Sub AboutLWARToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click
+        About.ShowDialog()
+    End Sub
+
+    Private Sub SubmitFeedbackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
+        Process.Start("https://github.com/CampusTools/LWAR/issues/new")
+    End Sub
+
+    Private Sub CheckForUpdatesToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem1.Click
+        Updates.ShowDialog()
+    End Sub
+
+    Private Sub txtUsername_TextChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
         If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.Username = txtUsername.Text
             My.Settings.Save()
         End If
     End Sub
 
-    Private Sub PasswordChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
-            My.Settings.Password = txtPassword.Text
-            My.Settings.Save()
-        End If
-    End Sub
-
-    Private Sub DomainChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
-            My.Settings.Domain = txtDomain.Text
-            My.Settings.Save()
-        End If
-    End Sub
-
-    Private Sub FileChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
+    Private Sub txtFile_TextChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
         If My.Settings.Enviro_RememberStartContents = True Then
             My.Settings.File = txtFile.Text
             My.Settings.Save()
         End If
     End Sub
 
+    Private Sub txtDomain_TextChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
+        If My.Settings.Enviro_RememberStartContents = True Then
+            My.Settings.Domain = txtDomain.Text
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub txtPassword_TextChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
+        If My.Settings.Enviro_RememberStartContents = True Then
+            My.Settings.Password = txtPassword.Text
+            My.Settings.Save()
+        End If
+    End Sub
+
+    Private Sub OpenFileDialogBrowse_FileOk(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialogBrowse.FileOk
+        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
+    End Sub
+
+    Private Sub StartProgramToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StartProgramToolStripMenuItem.Click
+        OpenFileDialogBrowse.ShowDialog()
+        Me.Show()
+    End Sub
+
+    Private Sub DocumentationToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem2.Click
+        Documentation.Show()
+    End Sub
 End Class

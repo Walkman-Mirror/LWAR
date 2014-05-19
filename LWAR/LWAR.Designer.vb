@@ -250,6 +250,9 @@ Partial Class LWAR
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e60613120a3ac3fc40e6c106a0e421b9ab620dce
         Me.NotificationContext.Size = New System.Drawing.Size(177, 104)
 =======
         Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
@@ -269,8 +272,11 @@ Partial Class LWAR
 =======
 =======
 >>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
+<<<<<<< HEAD
 =======
 >>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
+=======
+>>>>>>> e60613120a3ac3fc40e6c106a0e421b9ab620dce
         Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
         '
         'StartProgramToolStripMenuItem

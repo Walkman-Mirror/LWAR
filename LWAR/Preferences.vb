@@ -19,6 +19,7 @@
         If My.Settings.IconOnStartup = True Then chkBoxIconShowOnStartup.Checked = True Else chkBoxIconShowOnStartup.Checked = False
         If My.Settings.IconHideOnShowLWAR = True Then chkBoxHideIconWhenShowLWAR.Checked = True Else chkBoxHideIconWhenShowLWAR.Checked = False
         If My.Settings.RememberStartContents = True Then chkBoxRememberStartContents.Checked = True Else chkBoxRememberStartContents.Checked = False
+        Me.Hide()
     End Sub
 
 End Class

@@ -135,12 +135,6 @@
     <Compile Include="Preferences.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ProposedSettings.Designer.vb">
-      <DependentUpon>ProposedSettings.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ProposedSettings.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Updates.Designer.vb">
       <DependentUpon>Updates.vb</DependentUpon>
     </Compile>

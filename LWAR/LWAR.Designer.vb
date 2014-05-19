@@ -269,7 +269,7 @@ Partial Class LWAR
         '
         'NotificationContextPreferences
         '
-        Me.NotificationContextPreferences.Image = Global.LWAR.My.Resources.Resources.Options
+        Me.NotificationContextPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.NotificationContextPreferences.Name = "NotificationContextPreferences"
         Me.NotificationContextPreferences.Size = New System.Drawing.Size(176, 22)
         Me.NotificationContextPreferences.Text = "Open Preferences"
@@ -281,7 +281,7 @@ Partial Class LWAR
         '
         'NotificationContextQuit
         '
-        Me.NotificationContextQuit.Image = Global.LWAR.My.Resources.Resources.Exit2
+        Me.NotificationContextQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.NotificationContextQuit.Name = "NotificationContextQuit"
         Me.NotificationContextQuit.Size = New System.Drawing.Size(176, 22)
         Me.NotificationContextQuit.Text = "Quit LWAR"
@@ -439,7 +439,7 @@ Partial Class LWAR
         '
         Me.PreferencesToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.PreferencesToolStripMenuItemCurrent.Name = "PreferencesToolStripMenuItemCurrent"
-        Me.PreferencesToolStripMenuItemCurrent.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItemCurrent.Size = New System.Drawing.Size(152, 22)
         Me.PreferencesToolStripMenuItemCurrent.Text = "&Preferences"
         Me.PreferencesToolStripMenuItemCurrent.ToolTipText = "Tweak LWAR to your needs"
         '
@@ -554,10 +554,7 @@ Partial Class LWAR
         'LWAR
         '
         Me.AcceptButton = Me.btnStart
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = True
-        Me.AutoSize = True
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None
         Me.CancelButton = Me.btnCancel
         Me.ClientSize = New System.Drawing.Size(554, 336)
         Me.Controls.Add(Me.MainMenuStrip)

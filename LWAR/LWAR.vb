@@ -107,6 +107,11 @@
             txtPassword.Text = My.Settings.Password.ToString
             txtDomain.Text = My.Settings.Domain.ToString
             txtFile.Text = My.Settings.File.ToString
+        Else
+            txtUsername.Text = ""
+            txtPassword.Text = ""
+            txtDomain.Text = ""
+            txtFile.Text = ""
         End If
         If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
     End Sub

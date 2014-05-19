@@ -15,7 +15,7 @@
             Me.Visible = False
         Else
             Me.Show()
-            If My.Settings.Enviro_IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
+            If My.Settings.IconHideOnShowLWAR = True Then NotifyIcon.Visible = False
             NotificationContextShowHide.Text = "&Hide LWAR"
             NotificationContextShowHide.Image = My.Resources.eye_hidden
             Me.Visible = True
@@ -51,7 +51,7 @@
     'open webpages
 
     Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ProjectsSiteToolStripMenuItem.Click
-        Process.Start("https://campustools.github.io/LWAR")
+        Process.Start("http://campustools.github.io/LWAR")
     End Sub
 
     Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles SourceCodeToolStripMenuItem.Click
@@ -70,6 +70,12 @@
     End Sub
 
     Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
+        If My.Settings.RememberStartContents = True Then
+            My.Settings.Username = txtUsername.Text
+            My.Settings.Password = txtPassword.Text
+            My.Settings.Domain = txtDomain.Text
+            My.Settings.File = txtFile.Text
+        End If
         'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.))
         If txtUsername.Text = "" Or txtPassword.Text = "" Or txtFile.Text = "" Then
             MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
@@ -95,14 +101,14 @@
     'field management
 
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
-        If My.Settings.Enviro_IconOnStartup = True Then NotifyIcon.Visible = True
-        If My.Settings.Enviro_RememberStartContents = True Then
+        If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
+        If My.Settings.RememberStartContents = True Then
             txtUsername.Text = My.Settings.Username.ToString 'wtf is ToString
             txtPassword.Text = My.Settings.Password.ToString
             txtDomain.Text = My.Settings.Domain.ToString
             txtFile.Text = My.Settings.File.ToString
         End If
-        If My.Settings.Enviro_AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
+        If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
     End Sub
 
     Private Sub ClearFields(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -113,28 +119,28 @@
     End Sub
 
     Private Sub UsernameChanged(sender As Object, e As EventArgs) Handles txtUsername.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
+        If My.Settings.RememberStartContents = True Then
             My.Settings.Username = txtUsername.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub PasswordChanged(sender As Object, e As EventArgs) Handles txtPassword.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
+        If My.Settings.RememberStartContents = True Then
             My.Settings.Password = txtPassword.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub DomainChanged(sender As Object, e As EventArgs) Handles txtDomain.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
+        If My.Settings.RememberStartContents = True Then
             My.Settings.Domain = txtDomain.Text
             My.Settings.Save()
         End If
     End Sub
 
     Private Sub FileChanged(sender As Object, e As EventArgs) Handles txtFile.TextChanged
-        If My.Settings.Enviro_RememberStartContents = True Then
+        If My.Settings.RememberStartContents = True Then
             My.Settings.File = txtFile.Text
             My.Settings.Save()
         End If

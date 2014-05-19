@@ -248,6 +248,7 @@ Partial Class LWAR
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         Me.NotificationContext.Size = New System.Drawing.Size(177, 104)
 =======
         Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
@@ -265,6 +266,8 @@ Partial Class LWAR
 >>>>>>> parent of 3e5e385... Revert "Fixes"
         Me.NotificationContextStart.Text = "&Start program"
 =======
+=======
+>>>>>>> parent of 7814cbb... Added the Documentation window. (Still work in progress, ALSO, tomorrow I will be working on the Documentation instead of LWAR itself.)
         Me.NotificationContext.Size = New System.Drawing.Size(168, 126)
         '
         'StartProgramToolStripMenuItem

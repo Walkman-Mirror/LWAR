@@ -17,7 +17,7 @@
         WebBrowser1.Navigate("https://github.com/CampusTools/LWAR/wiki")
     End Sub
 
-    Private Sub FrontPgaeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FrontPgaeToolStripMenuItem.Click
+    Private Sub FrontPgaeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FrontPgaeToolStripMenuItem.Click, ToolStripButton3.Click
         WebBrowser1.Navigate("https://github.com/CampusTools/LWAR/wiki")
     End Sub
 
@@ -52,5 +52,9 @@
 
     Private Sub PagesIndexToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles PagesIndexToolStripMenuItem1.Click
         WebBrowser1.Navigate("https://github.com/CampusTools/LWAR/wiki/Pages-index")
+    End Sub
+
+    Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click, Refresh_ToolStripButton.Click
+        WebBrowser1.Refresh(WebBrowserRefreshOption.Completely)
     End Sub
 End Class

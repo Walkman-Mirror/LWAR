@@ -102,62 +102,62 @@ Namespace My
             End Set
         End Property
         
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property IconOnStartup() As String
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property IconOnStartup() As Boolean
             Get
-                Return CType(Me("IconOnStartup"), String)
+                Return CType(Me("IconOnStartup"),Boolean)
             End Get
-            Set(value As String)
+            Set
                 Me("IconOnStartup") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property IconHideOnShowLWAR() As String
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property IconHideOnShowLWAR() As Boolean
             Get
-                Return CType(Me("IconHideOnShowLWAR"), String)
+                Return CType(Me("IconHideOnShowLWAR"),Boolean)
             End Get
-            Set(value As String)
+            Set
                 Me("IconHideOnShowLWAR") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property RememberStartContents() As String
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property RememberStartContents() As Boolean
             Get
-                Return CType(Me("RememberStartContents"), String)
+                Return CType(Me("RememberStartContents"),Boolean)
             End Get
-            Set(value As String)
+            Set
                 Me("RememberStartContents") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("20000")> _
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("20000")>  _
         Public Property Updates_DownloadUpdaterConnectionTimeout() As Integer
             Get
-                Return CType(Me("Updates_DownloadUpdaterConnectionTimeout"), Integer)
+                Return CType(Me("Updates_DownloadUpdaterConnectionTimeout"),Integer)
             End Get
-            Set(value As Integer)
+            Set
                 Me("Updates_DownloadUpdaterConnectionTimeout") = value
             End Set
         End Property
-
-        <Global.System.Configuration.UserScopedSettingAttribute(), _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(), _
-         Global.System.Configuration.DefaultSettingValueAttribute("true")> _
-        Public Property AutoAssignUsername() As String
+        
+        <Global.System.Configuration.UserScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("True")>  _
+        Public Property AutoAssignUsername() As Boolean
             Get
-                Return CType(Me("AutoAssignUsername"), String)
+                Return CType(Me("AutoAssignUsername"),Boolean)
             End Get
-            Set(value As String)
+            Set
                 Me("AutoAssignUsername") = value
             End Set
         End Property

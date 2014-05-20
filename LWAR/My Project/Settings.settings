@@ -14,20 +14,20 @@
     <Setting Name="File" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="IconOnStartup" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+    <Setting Name="IconOnStartup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="IconHideOnShowLWAR" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+    <Setting Name="IconHideOnShowLWAR" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
-    <Setting Name="RememberStartContents" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+    <Setting Name="RememberStartContents" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="Updates_DownloadUpdaterConnectionTimeout" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">20000</Value>
     </Setting>
-    <Setting Name="AutoAssignUsername" Type="System.String" Scope="User">
-      <Value Profile="(Default)">true</Value>
+    <Setting Name="AutoAssignUsername" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

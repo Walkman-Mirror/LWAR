@@ -172,7 +172,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
@@ -216,7 +215,6 @@
     <None Include="Resources\go_right_d.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="2014-05-14_204202_2.ico" />
     <None Include="Resources\1400410576_24736.ico" />
     <None Include="Resources\1400410566_application-pgp-signature.png" />
     <None Include="Resources\1371833561_help-browser.png" />

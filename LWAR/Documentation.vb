@@ -34,6 +34,7 @@
     End Sub
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser1.DocumentCompleted
+        ToolStripTextBox1.Text = WebBrowser1.Url.ToString
         PageTitle.Text = WebBrowser1.DocumentTitle.ToString
         ToolStripProgressBar1.Visible = False
     End Sub

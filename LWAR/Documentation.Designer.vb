@@ -55,11 +55,14 @@ Partial Class Documentation
         Me.StatusText_label = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ContextMenuStrip1.SuspendLayout
-        Me.ToolStrip1.SuspendLayout
-        Me.MenuStrip1.SuspendLayout
-        Me.StatusStrip1.SuspendLayout
-        Me.SuspendLayout
+        Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ContextMenuStrip1.SuspendLayout()
+        Me.ToolStrip1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
+        Me.SuspendLayout()
         '
         'StatusText_timer
         '
@@ -120,11 +123,11 @@ Partial Class Documentation
         '
         Me.WebBrowser1.ContextMenuStrip = Me.ContextMenuStrip1
         Me.WebBrowser1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = false
+        Me.WebBrowser1.IsWebBrowserContextMenuEnabled = False
         Me.WebBrowser1.Location = New System.Drawing.Point(0, 49)
         Me.WebBrowser1.MinimumSize = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.Name = "WebBrowser1"
-        Me.WebBrowser1.ScriptErrorsSuppressed = true
+        Me.WebBrowser1.ScriptErrorsSuppressed = True
         Me.WebBrowser1.Size = New System.Drawing.Size(844, 523)
         Me.WebBrowser1.TabIndex = 7
         '
@@ -136,7 +139,7 @@ Partial Class Documentation
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PageTitle, Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator3, Me.ToolStripButton3, Me.Refresh_ToolStripButton, Me.ToolStripSeparator4, Me.ToolStripButton5})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripSeparator3, Me.ToolStripTextBox1, Me.ToolStripSeparator6, Me.ToolStripButton3, Me.Refresh_ToolStripButton, Me.ToolStripSeparator4, Me.ToolStripButton5, Me.ToolStripSeparator7, Me.PageTitle})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(844, 25)
@@ -266,7 +269,7 @@ Partial Class Documentation
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
         Me.ToolStripProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
-        Me.ToolStripProgressBar1.Visible = false
+        Me.ToolStripProgressBar1.Visible = False
         '
         'StatusStrip1
         '
@@ -276,6 +279,21 @@ Partial Class Documentation
         Me.StatusStrip1.Size = New System.Drawing.Size(844, 22)
         Me.StatusStrip1.TabIndex = 4
         Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripTextBox1
+        '
+        Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
+        Me.ToolStripTextBox1.Size = New System.Drawing.Size(450, 25)
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator7
+        '
+        Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(6, 25)
         '
         'Documentation
         '
@@ -333,4 +351,7 @@ End Sub
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents RefreshToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents StopToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
 End Class

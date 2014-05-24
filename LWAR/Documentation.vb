@@ -57,4 +57,8 @@
     Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click, Refresh_ToolStripButton.Click
         WebBrowser1.Refresh(WebBrowserRefreshOption.Completely)
     End Sub
+
+    Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButton5.Click
+        WebBrowser1.Stop()
+    End Sub
 End Class

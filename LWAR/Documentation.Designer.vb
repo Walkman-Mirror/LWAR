@@ -196,7 +196,7 @@ Partial Class Documentation
         Me.ToolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton5.Name = "ToolStripButton5"
         Me.ToolStripButton5.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton5.Text = "ToolStripButton5"
+        Me.ToolStripButton5.Text = "Stop"
         '
         'PagesIndexToolStripMenuItem1
         '

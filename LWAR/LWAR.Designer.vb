@@ -246,45 +246,45 @@ Partial Class LWAR
         '
         Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextStart, Me.ToolStripSeparator7, Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
-        Me.NotificationContext.Size = New System.Drawing.Size(177, 104)
+        Me.NotificationContext.Size = New System.Drawing.Size(153, 126)
         '
         'NotificationContextStart
         '
         Me.NotificationContextStart.Image = Global.LWAR.My.Resources.Resources._1371833067_go_next
         Me.NotificationContextStart.Name = "NotificationContextStart"
-        Me.NotificationContextStart.Size = New System.Drawing.Size(176, 22)
+        Me.NotificationContextStart.Size = New System.Drawing.Size(152, 22)
         Me.NotificationContextStart.Text = "&Start program"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(173, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(149, 6)
         '
         'NotificationContextShowHide
         '
         Me.NotificationContextShowHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
         Me.NotificationContextShowHide.Name = "NotificationContextShowHide"
-        Me.NotificationContextShowHide.Size = New System.Drawing.Size(176, 22)
+        Me.NotificationContextShowHide.Size = New System.Drawing.Size(152, 22)
         Me.NotificationContextShowHide.Text = "&Hide LWAR"
         '
         'NotificationContextPreferences
         '
-        Me.NotificationContextPreferences.Image = Global.LWAR.My.Resources.Resources.Options
+        Me.NotificationContextPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.NotificationContextPreferences.Name = "NotificationContextPreferences"
-        Me.NotificationContextPreferences.Size = New System.Drawing.Size(176, 22)
-        Me.NotificationContextPreferences.Text = "Open Preferences"
+        Me.NotificationContextPreferences.Size = New System.Drawing.Size(152, 22)
+        Me.NotificationContextPreferences.Text = "&Preferences"
         '
         'ToolStripSeparatorNotify1
         '
         Me.ToolStripSeparatorNotify1.Name = "ToolStripSeparatorNotify1"
-        Me.ToolStripSeparatorNotify1.Size = New System.Drawing.Size(173, 6)
+        Me.ToolStripSeparatorNotify1.Size = New System.Drawing.Size(149, 6)
         '
         'NotificationContextQuit
         '
-        Me.NotificationContextQuit.Image = Global.LWAR.My.Resources.Resources.Exit2
+        Me.NotificationContextQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.NotificationContextQuit.Name = "NotificationContextQuit"
-        Me.NotificationContextQuit.Size = New System.Drawing.Size(176, 22)
-        Me.NotificationContextQuit.Text = "Quit LWAR"
+        Me.NotificationContextQuit.Size = New System.Drawing.Size(152, 22)
+        Me.NotificationContextQuit.Text = "&Quit LWAR"
         '
         'OpenFileDialogBrowse
         '
@@ -315,7 +315,7 @@ Partial Class LWAR
         '
         Me.PreferencesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Options
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'HelpToolStripMenuItem
@@ -417,14 +417,14 @@ Partial Class LWAR
         '
         Me.FileToolStripMenuItemCurrent.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitLWARToolStripMenuItem})
         Me.FileToolStripMenuItemCurrent.Name = "FileToolStripMenuItemCurrent"
-        Me.FileToolStripMenuItemCurrent.Size = New System.Drawing.Size(38, 20)
+        Me.FileToolStripMenuItemCurrent.Size = New System.Drawing.Size(37, 20)
         Me.FileToolStripMenuItemCurrent.Text = "&File"
         '
         'QuitLWARToolStripMenuItem
         '
         Me.QuitLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
-        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
+        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
         Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
         Me.QuitLWARToolStripMenuItem.ToolTipText = "Closes LWAR"
         '
@@ -432,14 +432,14 @@ Partial Class LWAR
         '
         Me.ToolsToolStripMenuItemCurrent.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreferencesToolStripMenuItemCurrent})
         Me.ToolsToolStripMenuItemCurrent.Name = "ToolsToolStripMenuItemCurrent"
-        Me.ToolsToolStripMenuItemCurrent.Size = New System.Drawing.Size(49, 20)
+        Me.ToolsToolStripMenuItemCurrent.Size = New System.Drawing.Size(48, 20)
         Me.ToolsToolStripMenuItemCurrent.Text = "&Tools"
         '
         'PreferencesToolStripMenuItemCurrent
         '
         Me.PreferencesToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.PreferencesToolStripMenuItemCurrent.Name = "PreferencesToolStripMenuItemCurrent"
-        Me.PreferencesToolStripMenuItemCurrent.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItemCurrent.Size = New System.Drawing.Size(152, 22)
         Me.PreferencesToolStripMenuItemCurrent.Text = "&Preferences"
         Me.PreferencesToolStripMenuItemCurrent.ToolTipText = "Tweak LWAR to your needs"
         '
@@ -454,7 +454,7 @@ Partial Class LWAR
         '
         Me.SubmitFeedbackToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
         Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
-        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.SubmitFeedbackToolStripMenuItem.Text = "Submit &feedback"
         Me.SubmitFeedbackToolStripMenuItem.ToolTipText = "Submit issues, feedback and requests"
         '
@@ -462,38 +462,38 @@ Partial Class LWAR
         '
         Me.DocumentationToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
         Me.DocumentationToolStripMenuItemCurrent.Name = "DocumentationToolStripMenuItemCurrent"
-        Me.DocumentationToolStripMenuItemCurrent.Size = New System.Drawing.Size(179, 22)
+        Me.DocumentationToolStripMenuItemCurrent.Size = New System.Drawing.Size(170, 22)
         Me.DocumentationToolStripMenuItemCurrent.Text = "&Documentation"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(167, 6)
         '
         'ProjectsSiteToolStripMenuItem
         '
         Me.ProjectsSiteToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1371846583_internet_web_browser
         Me.ProjectsSiteToolStripMenuItem.Name = "ProjectsSiteToolStripMenuItem"
-        Me.ProjectsSiteToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.ProjectsSiteToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ProjectsSiteToolStripMenuItem.Text = "&Projects site"
         '
         'SourceCodeToolStripMenuItem
         '
         Me.SourceCodeToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398638918_document_properties
         Me.SourceCodeToolStripMenuItem.Name = "SourceCodeToolStripMenuItem"
-        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.SourceCodeToolStripMenuItem.Text = "&Source code"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(167, 6)
         '
         'CheckForUpdatesToolStripMenuItemCurrent
         '
         Me.CheckForUpdatesToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1371833577_view_refresh
         Me.CheckForUpdatesToolStripMenuItemCurrent.Name = "CheckForUpdatesToolStripMenuItemCurrent"
-        Me.CheckForUpdatesToolStripMenuItemCurrent.Size = New System.Drawing.Size(179, 22)
+        Me.CheckForUpdatesToolStripMenuItemCurrent.Size = New System.Drawing.Size(170, 22)
         Me.CheckForUpdatesToolStripMenuItemCurrent.Text = "&Check for updates"
         '
         'AboutLWARToolStripMenuItem
@@ -501,7 +501,7 @@ Partial Class LWAR
         Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
         Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
         Me.AboutLWARToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
+        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
         '
         'btnStart

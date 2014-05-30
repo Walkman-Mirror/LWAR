@@ -82,20 +82,44 @@
         Else
             If txtDomain.Text = "" Then
                 NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' ...", ToolTipIcon.Info)
-                Process.Start(txtFile.Text.ToString, userName:=txtUsername.Text.ToString, password:=txtPassword.Text.ToString)
+                Try
+                    'Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
                 Catch ex As Exception
                     MsgBox("There was a problem with starting the program!", MsgBoxStyle.Exclamation)
                 End Try
             Else
                 NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' on domain '" & txtDomain.Text.ToString & "' ...", ToolTipIcon.Info)
+                'Dim strSecurePass As System.Security.SecureString
+                'strSecurePass = txtPassword.Text
                 Try
-                    Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+                    LoadSecureString(txtPassword.Text)
+                    Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, strSecurePass, txtDomain.Text.ToString)
                 Catch ex As Exception
                     MsgBox("There was a problem with starting the program!", MsgBoxStyle.Exclamation)
                 End Try
             End If
         End If
     End Sub
+
+    'credits for this function to http://bytes.com/topic/visual-basic-net/answers/609857-how-set-value-securestring
+    Public Shared Function LoadSecureString(ByVal input As String) As System.Security.SecureString()
+        'LoadSecureString = Nothing                                 'original line
+        Dim strSecurePass As System.Security.SecureString = Nothing 'line from @Walkman's brain
+
+        If Not String.IsNullOrEmpty(input) Then
+            'LoadSecureString = New System.Security.SecureString    'original line
+            strSecurePass = New System.Security.SecureString        'line from @Walkman's brain
+
+            For Each character As Char In input.ToCharArray
+                'LoadSecureString.AppendChar(character)             'original line
+                strSecurePass.AppendChar(character)                 'line from @Walkman's brain
+
+            Next
+            'LoadSecureString.MakeReadOnly()                        'original line
+            strSecurePass.MakeReadOnly()                            'line from @Walkman's brain
+        End If
+
+    End Function
 
     'field management
 

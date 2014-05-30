@@ -140,6 +140,7 @@ Partial Class Preferences
         Me.MinimizeBox = False
         Me.Name = "Preferences"
         Me.ShowInTaskbar = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Preferences"
         Me.TopMost = True

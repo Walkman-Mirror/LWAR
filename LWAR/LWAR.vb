@@ -87,7 +87,7 @@
                     LoadSecureString(txtPassword.Text)
                     Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, strSecurePass, txtDomain.Text.ToString) 'for some reason it gets itself into a fit if you don't include the domain
                 Catch ex As Exception
-                    MsgBox("There was a problem with starting the program!", MsgBoxStyle.Exclamation)
+                    MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
                 End Try
             Else
                 NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' on domain '" & txtDomain.Text.ToString & "' ...", ToolTipIcon.Info)
@@ -97,7 +97,7 @@
                     LoadSecureString(txtPassword.Text)
                     Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, strSecurePass, txtDomain.Text.ToString)
                 Catch ex As Exception
-                    MsgBox("There was a problem with starting the program!", MsgBoxStyle.Exclamation)
+                    MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
                 End Try
             End If
         End If

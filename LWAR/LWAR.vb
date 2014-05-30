@@ -82,7 +82,7 @@
             MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
         Else
             If txtDomain.Text = "" Then
-                NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' ...", ToolTipIcon.Info)
+                NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' ...", ToolTipIcon.Info)
                 Try
                     LoadSecureString(txtPassword.Text)
                     Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, Nothing) 'for some reason it gets itself into a fit if you don't include the domain
@@ -90,12 +90,12 @@
                     MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
                 End Try
             Else
-                NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' on domain '" & txtDomain.Text.ToString & "' ...", ToolTipIcon.Info)
+                NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' on domain '" & txtDomain.Text & "' ...", ToolTipIcon.Info)
                 'Dim strSecurePass As System.Security.SecureString
                 'strSecurePass = txtPassword.Text
                 Try
                     LoadSecureString(txtPassword.Text)
-                    Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, strSecurePass, txtDomain.Text.ToString)
+                    Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, txtDomain.Text)
                 Catch ex As Exception
                     MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
                 End Try

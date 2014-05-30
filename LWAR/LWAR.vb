@@ -46,13 +46,13 @@
     End Sub
 
     Private Sub BrowseForFile_Ok(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles OpenFileDialogBrowse.FileOk
-        txtFile.Text = OpenFileDialogBrowse.FileName.ToString()
+        txtFile.Text = OpenFileDialogBrowse.FileName
     End Sub
 
     'open webpages
 
     Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ProjectsSiteToolStripMenuItem.Click
-        Process.Start("http://campustools.github.io/LWAR")
+        Process.Start("https://campustools.github.io/LWAR")
     End Sub
 
     Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles SourceCodeToolStripMenuItem.Click
@@ -130,12 +130,12 @@
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
         If My.Settings.RememberStartContents = True Then
-            txtUsername.Text = My.Settings.Username.ToString 'wtf is ToString
-            txtPassword.Text = My.Settings.Password.ToString
-            txtDomain.Text = My.Settings.Domain.ToString
-            txtFile.Text = My.Settings.File.ToString
+            txtUsername.Text = My.Settings.Username
+            txtPassword.Text = My.Settings.Password
+            txtDomain.Text = My.Settings.Domain
+            txtFile.Text = My.Settings.File
         End If
-        If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name.ToString
+        If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name
     End Sub
 
     Private Sub ClearFields(sender As Object, e As EventArgs) Handles btnClear.Click

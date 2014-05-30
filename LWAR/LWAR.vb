@@ -1,4 +1,5 @@
 ﻿Public Class LWAR
+    Dim strSecurePass As System.Security.SecureString = Nothing     'See Sub LoadSecureString()
 
     'window control
 
@@ -83,7 +84,8 @@
             If txtDomain.Text = "" Then
                 NotifyIcon.ShowBalloonTip(10000, "LWAR", "Starting '" & txtFile.Text.ToString & "' as '" & txtUsername.Text.ToString & "' ...", ToolTipIcon.Info)
                 Try
-                    'Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, txtPassword.Text.ToString, txtDomain.Text.ToString)
+                    LoadSecureString(txtPassword.Text)
+                    Process.Start(txtFile.Text.ToString, txtUsername.Text.ToString, strSecurePass, txtDomain.Text.ToString) 'for some reason it gets itself into a fit if you don't include the domain
                 Catch ex As Exception
                     MsgBox("There was a problem with starting the program!", MsgBoxStyle.Exclamation)
                 End Try
@@ -102,21 +104,23 @@
     End Sub
 
     'credits for this function to http://bytes.com/topic/visual-basic-net/answers/609857-how-set-value-securestring
+    ' - also (but not much) http://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx?cs-save-lang=1&cs-lang=vb#code-snippet-1
     Public Shared Function LoadSecureString(ByVal input As String) As System.Security.SecureString()
         'LoadSecureString = Nothing                                 'original line
-        Dim strSecurePass As System.Security.SecureString = Nothing 'line from @Walkman's brain
+        'Dim strSecurePass As System.Security.SecureString = Nothing 'line from @Walkman's brain
+        '     --  COMMENTED OUT BECAUSE IT HAS TO BE AT THE BEGINNING OF THE PROGRAM  --
 
         If Not String.IsNullOrEmpty(input) Then
             'LoadSecureString = New System.Security.SecureString    'original line
-            strSecurePass = New System.Security.SecureString        'line from @Walkman's brain
+            LWAR.strSecurePass = New System.Security.SecureString   'line from @Walkman's brain
 
             For Each character As Char In input.ToCharArray
                 'LoadSecureString.AppendChar(character)             'original line
-                strSecurePass.AppendChar(character)                 'line from @Walkman's brain
+                LWAR.strSecurePass.AppendChar(character)            'line from @Walkman's brain
 
             Next
             'LoadSecureString.MakeReadOnly()                        'original line
-            strSecurePass.MakeReadOnly()                            'line from @Walkman's brain
+            LWAR.strSecurePass.MakeReadOnly()                       'line from @Walkman's brain
         End If
 
     End Function

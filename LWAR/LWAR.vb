@@ -66,7 +66,7 @@
     'run process
 
     Private Sub StartFromNotificationContext(sender As Object, e As EventArgs) Handles NotificationContextStart.Click
-        OpenFileDialogBrowse.ShowDialog() 'can i ask wtf this does? how does it run the program? matthew
+        OpenFileDialogBrowse.ShowDialog() 'can i ask wtf this does? how does it run the program? matthew REPLY: It is a quick way to choose the file when LWAR is hidden and then fill in the user credentials.
         Me.Show()
     End Sub
 

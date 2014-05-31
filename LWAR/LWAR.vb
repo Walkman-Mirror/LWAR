@@ -85,7 +85,7 @@
                 NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' ...", ToolTipIcon.Info)
                 Try
                     LoadSecureString(txtPassword.Text)
-                    Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, Nothing) 'for some reason it gets itself into a fit if you don't include the domain
+                    Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, Nothing)
                 Catch ex As Exception
                     MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
                 End Try

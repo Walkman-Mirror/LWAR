@@ -3,7 +3,7 @@
 
     'window control
 
-    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, QuitLWARToolStripMenuItem.Click
+    Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, ToolStripMenuItemFileQuit.Click
         Application.Exit()
     End Sub
 
@@ -25,19 +25,19 @@
 
     'show windows
 
-    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs) Handles AboutLWARToolStripMenuItem.Click, AboutLWARToolStripMenuItem1.Click
+    Private Sub ShowAboutLWAR(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpAbout.Click, AboutLWARToolStripMenuItem1.Click
         About.ShowDialog()
     End Sub
 
-    Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click, DocumentationToolStripMenuItemCurrent.Click
+    Private Sub ShowDocumentation(sender As Object, e As EventArgs) Handles DocumentationToolStripMenuItem.Click, ToolStripMenuItemHelpDocumentation.Click
         Documentation.Show()
     End Sub
 
-    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, PreferencesToolStripMenuItemCurrent.Click, PreferencesToolStripMenuItem.Click
+    Private Sub OpenPreferences(sender As Object, e As EventArgs) Handles NotificationContextPreferences.Click, ToolStripMenuItemToolsPreferences.Click, PreferencesToolStripMenuItem.Click
         Preferences.ShowDialog()
     End Sub
 
-    Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click, CheckForUpdatesToolStripMenuItemCurrent.Click
+    Private Sub CheckForUpdates(sender As Object, e As EventArgs) Handles CheckForUpdatesToolStripMenuItem.Click, ToolStripMenuItemHelpCheckForUpdates.Click
         Updates.ShowDialog()
     End Sub
 
@@ -51,33 +51,43 @@
 
     'open webpages
 
-    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ProjectsSiteToolStripMenuItem.Click
+    Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpProjectsSite.Click
         Process.Start("https://campustools.github.io/LWAR")
     End Sub
 
-    Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles SourceCodeToolStripMenuItem.Click
+    Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpSourceCode.Click
         Process.Start("https://github.com/CampusTools/LWAR")
     End Sub
 
-    Private Sub SubmitFeedback(sender As Object, e As EventArgs) Handles SubmitFeedbackToolStripMenuItem.Click
+    Private Sub SubmitFeedback(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpSubmitFeedback.Click
         Process.Start("https://github.com/CampusTools/LWAR/issues/new")
     End Sub
 
     'run process
 
     Private Sub StartFromNotificationContext(sender As Object, e As EventArgs) Handles NotificationContextStart.Click
-        OpenFileDialogBrowse.ShowDialog() 'can i ask wtf this does? how does it run the program? matthew REPLY: It is a quick way to choose the file when LWAR is hidden and then fill in the user credentials.
-        Me.Show()
+        If txtFile.Text = "" Then
+            OpenFileDialogBrowse.ShowDialog()
+            Me.Show()
+        ElseIf txtUsername.Text = "" Or txtPassword.Text = "" Then
+            MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
+            Me.Show()
+        Else
+            StartProcess()
+        End If
     End Sub
 
-    Private Sub StartProcess(sender As Object, e As EventArgs) Handles btnStart.Click
+    Private Sub btnStart_Click(sender As Object, e As EventArgs) Handles btnStart.Click
+        StartProcess()
+    End Sub
+
+    Private Sub StartProcess()
         If My.Settings.RememberStartContents = True Then
             My.Settings.Username = txtUsername.Text
             My.Settings.Password = txtPassword.Text
             My.Settings.Domain = txtDomain.Text
             My.Settings.File = txtFile.Text
         End If
-        'Starts user-specified program (Still working on this (Uncomment the code to allow it to be executed at run time.))
         If txtUsername.Text = "" Or txtPassword.Text = "" Or txtFile.Text = "" Then
             MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
         Else
@@ -91,8 +101,6 @@
                 End Try
             Else
                 NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' on domain '" & txtDomain.Text & "' ...", ToolTipIcon.Info)
-                'Dim strSecurePass As System.Security.SecureString
-                'strSecurePass = txtPassword.Text
                 Try
                     LoadSecureString(txtPassword.Text)
                     Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, txtDomain.Text)
@@ -103,7 +111,7 @@
         End If
     End Sub
 
-    'credits for this function to http://bytes.com/topic/visual-basic-net/answers/609857-how-set-value-securestring
+    'adapted from http://bytes.com/topic/visual-basic-net/answers/609857-how-set-value-securestring
     ' - also (but not much) http://msdn.microsoft.com/en-us/library/system.security.securestring(v=vs.110).aspx?cs-save-lang=1&cs-lang=vb#code-snippet-1
     Public Shared Function LoadSecureString(ByVal input As String) As System.Security.SecureString()
         'LoadSecureString = Nothing                                 'original line

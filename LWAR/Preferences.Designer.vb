@@ -34,6 +34,7 @@ Partial Class Preferences
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.chkAutoAssignUserName = New System.Windows.Forms.CheckBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.chkBetaUpdateChannel = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -128,6 +129,7 @@ Partial Class Preferences
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.chkBetaUpdateChannel)
         Me.GroupBox1.Controls.Add(Me.chkAutoAssignUserName)
         Me.GroupBox1.Controls.Add(Me.chkBoxRememberStartContents)
         Me.GroupBox1.Controls.Add(Me.chkBoxHideIconWhenShowLWAR)
@@ -160,7 +162,17 @@ Partial Class Preferences
         Me.Panel1.Size = New System.Drawing.Size(467, 100)
         Me.Panel1.TabIndex = 71
         '
-        'PPreferences
+        'chkBetaUpdateChannel
+        '
+        Me.chkBetaUpdateChannel.AutoSize = True
+        Me.chkBetaUpdateChannel.Location = New System.Drawing.Point(6, 111)
+        Me.chkBetaUpdateChannel.Name = "chkBetaUpdateChannel"
+        Me.chkBetaUpdateChannel.Size = New System.Drawing.Size(146, 17)
+        Me.chkBetaUpdateChannel.TabIndex = 4
+        Me.chkBetaUpdateChannel.Text = "Join beta update channel"
+        Me.chkBetaUpdateChannel.UseVisualStyleBackColor = True
+        '
+        'Preferences
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -173,7 +185,7 @@ Partial Class Preferences
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "PPreferences"
+        Me.Name = "Preferences"
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -198,4 +210,5 @@ Partial Class Preferences
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents chkAutoAssignUserName As System.Windows.Forms.CheckBox
+    Friend WithEvents chkBetaUpdateChannel As System.Windows.Forms.CheckBox
 End Class

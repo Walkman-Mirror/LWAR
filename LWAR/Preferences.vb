@@ -11,6 +11,7 @@
         My.Settings.IconHideOnShowLWAR = chkBoxHideIconWhenShowLWAR.Checked
         My.Settings.RememberStartContents = chkBoxRememberStartContents.Checked
         My.Settings.AutoAssignUsername = chkAutoAssignUserName.Checked
+        My.Settings.BetaUpdateChannel = chkBetaUpdateChannel.checked
         My.Settings.Save()
         If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon.Visible = False Else LWAR.NotifyIcon.Visible = True
         Me.Close()

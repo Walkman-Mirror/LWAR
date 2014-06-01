@@ -24,7 +24,11 @@ Public Class Updates
     End Sub
 
     Private Sub Start()
-        WebBrowser1.Navigate("https://campustools.github.io/LWAR/current_version.txt")
+        If My.Settings.BetaUpdateChannel = True Then
+            WebBrowser1.Navigate("http://campustools.github.io/LWAR/updates/channel/beta/current_version.txt")
+        Else
+            WebBrowser1.Navigate("http://campustools.github.io/LWAR/updates/channel/stable/current_version.txt")
+        End If
     End Sub
     Private Sub Updates_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         your_version_text.Text = "Your version: v" & My.Application.Info.Version.ToString
@@ -60,7 +64,11 @@ Public Class Updates
     End Sub
 
     Private Sub Downloader_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles Downloader.DoWork
-        My.Computer.Network.DownloadFile("https://campustools.github.io/LWAR/LWAR-Updater.exe", "LWAR-Updater.exe", False, False, False, connectionTimeout:=My.Settings.Updates_DownloadUpdaterConnectionTimeout, overwrite:=True)
+        If My.Settings.BetaUpdateChannel = True Then
+            My.Computer.Network.DownloadFile("https://campustools.github.io/LWAR/updates/channel/beta/LWAR-Updater.exe", "LWAR-Updater.exe", False, False, False, connectionTimeout:=My.Settings.Updates_DownloadUpdaterConnectionTimeout, overwrite:=True)
+        Else
+            My.Computer.Network.DownloadFile("https://campustools.github.io/LWAR/updates/channel/stable/LWAR-Updater.exe", "LWAR-Updater.exe", False, False, False, connectionTimeout:=My.Settings.Updates_DownloadUpdaterConnectionTimeout, overwrite:=True)
+        End If
     End Sub
 
     Private Sub Downloader_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles Downloader.RunWorkerCompleted

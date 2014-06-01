@@ -28,12 +28,12 @@ Partial Class PPreferences
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.chkBoxRememberStartContents = New System.Windows.Forms.CheckBox()
+        Me.chkBoxHideIconWhenShowLWAR = New System.Windows.Forms.CheckBox()
+        Me.chkBoxIconShowOnStartup = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.chkAutoAssignUserName = New System.Windows.Forms.CheckBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -96,48 +96,58 @@ Partial Class PPreferences
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
-        'CheckBox3
+        'chkBoxRememberStartContents
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Location = New System.Drawing.Point(6, 65)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(143, 17)
-        Me.CheckBox3.TabIndex = 2
-        Me.CheckBox3.Text = "Remember Starting fields"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.chkBoxRememberStartContents.AutoSize = True
+        Me.chkBoxRememberStartContents.Location = New System.Drawing.Point(6, 65)
+        Me.chkBoxRememberStartContents.Name = "chkBoxRememberStartContents"
+        Me.chkBoxRememberStartContents.Size = New System.Drawing.Size(143, 17)
+        Me.chkBoxRememberStartContents.TabIndex = 2
+        Me.chkBoxRememberStartContents.Text = "Remember Starting fields"
+        Me.chkBoxRememberStartContents.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'chkBoxHideIconWhenShowLWAR
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Location = New System.Drawing.Point(6, 42)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(177, 17)
-        Me.CheckBox2.TabIndex = 1
-        Me.CheckBox2.Text = "Hide icon when showing LWAR"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.chkBoxHideIconWhenShowLWAR.AutoSize = True
+        Me.chkBoxHideIconWhenShowLWAR.Location = New System.Drawing.Point(6, 42)
+        Me.chkBoxHideIconWhenShowLWAR.Name = "chkBoxHideIconWhenShowLWAR"
+        Me.chkBoxHideIconWhenShowLWAR.Size = New System.Drawing.Size(177, 17)
+        Me.chkBoxHideIconWhenShowLWAR.TabIndex = 1
+        Me.chkBoxHideIconWhenShowLWAR.Text = "Hide icon when showing LWAR"
+        Me.chkBoxHideIconWhenShowLWAR.UseVisualStyleBackColor = True
         '
-        'CheckBox1
+        'chkBoxIconShowOnStartup
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 19)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(167, 17)
-        Me.CheckBox1.TabIndex = 0
-        Me.CheckBox1.Text = "Show icon on program startup"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.chkBoxIconShowOnStartup.AutoSize = True
+        Me.chkBoxIconShowOnStartup.Location = New System.Drawing.Point(6, 19)
+        Me.chkBoxIconShowOnStartup.Name = "chkBoxIconShowOnStartup"
+        Me.chkBoxIconShowOnStartup.Size = New System.Drawing.Size(167, 17)
+        Me.chkBoxIconShowOnStartup.TabIndex = 0
+        Me.chkBoxIconShowOnStartup.Text = "Show icon on program startup"
+        Me.chkBoxIconShowOnStartup.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
         Me.GroupBox1.Controls.Add(Me.chkAutoAssignUserName)
-        Me.GroupBox1.Controls.Add(Me.CheckBox3)
-        Me.GroupBox1.Controls.Add(Me.CheckBox2)
-        Me.GroupBox1.Controls.Add(Me.CheckBox1)
+        Me.GroupBox1.Controls.Add(Me.chkBoxRememberStartContents)
+        Me.GroupBox1.Controls.Add(Me.chkBoxHideIconWhenShowLWAR)
+        Me.GroupBox1.Controls.Add(Me.chkBoxIconShowOnStartup)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 106)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(443, 327)
         Me.GroupBox1.TabIndex = 72
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Preferences"
+        '
+        'chkAutoAssignUserName
+        '
+        Me.chkAutoAssignUserName.AutoSize = True
+        Me.chkAutoAssignUserName.Location = New System.Drawing.Point(6, 88)
+        Me.chkAutoAssignUserName.Name = "chkAutoAssignUserName"
+        Me.chkAutoAssignUserName.Size = New System.Drawing.Size(270, 17)
+        Me.chkAutoAssignUserName.TabIndex = 3
+        Me.chkAutoAssignUserName.Text = "Automatically fill the username field with current user"
+        Me.chkAutoAssignUserName.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -149,16 +159,6 @@ Partial Class PPreferences
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(467, 100)
         Me.Panel1.TabIndex = 71
-        '
-        'chkAutoAssignUserName
-        '
-        Me.chkAutoAssignUserName.AutoSize = True
-        Me.chkAutoAssignUserName.Location = New System.Drawing.Point(6, 88)
-        Me.chkAutoAssignUserName.Name = "chkAutoAssignUserName"
-        Me.chkAutoAssignUserName.Size = New System.Drawing.Size(270, 17)
-        Me.chkAutoAssignUserName.TabIndex = 3
-        Me.chkAutoAssignUserName.Text = "Automatically fill the username field with current user"
-        Me.chkAutoAssignUserName.UseVisualStyleBackColor = True
         '
         'PPreferences
         '
@@ -192,9 +192,9 @@ Partial Class PPreferences
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents CheckBox3 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox2 As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkBoxRememberStartContents As System.Windows.Forms.CheckBox
+    Friend WithEvents chkBoxHideIconWhenShowLWAR As System.Windows.Forms.CheckBox
+    Friend WithEvents chkBoxIconShowOnStartup As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents chkAutoAssignUserName As System.Windows.Forms.CheckBox

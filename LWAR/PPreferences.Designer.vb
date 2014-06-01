@@ -33,6 +33,7 @@ Partial Class PPreferences
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.chkAutoAssignUserName = New System.Windows.Forms.CheckBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -127,6 +128,7 @@ Partial Class PPreferences
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.chkAutoAssignUserName)
         Me.GroupBox1.Controls.Add(Me.CheckBox3)
         Me.GroupBox1.Controls.Add(Me.CheckBox2)
         Me.GroupBox1.Controls.Add(Me.CheckBox1)
@@ -147,6 +149,16 @@ Partial Class PPreferences
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(467, 100)
         Me.Panel1.TabIndex = 71
+        '
+        'chkAutoAssignUserName
+        '
+        Me.chkAutoAssignUserName.AutoSize = True
+        Me.chkAutoAssignUserName.Location = New System.Drawing.Point(6, 88)
+        Me.chkAutoAssignUserName.Name = "chkAutoAssignUserName"
+        Me.chkAutoAssignUserName.Size = New System.Drawing.Size(270, 17)
+        Me.chkAutoAssignUserName.TabIndex = 3
+        Me.chkAutoAssignUserName.Text = "Automatically fill the username field with current user"
+        Me.chkAutoAssignUserName.UseVisualStyleBackColor = True
         '
         'PPreferences
         '
@@ -185,4 +197,5 @@ Partial Class PPreferences
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
+    Friend WithEvents chkAutoAssignUserName As System.Windows.Forms.CheckBox
 End Class

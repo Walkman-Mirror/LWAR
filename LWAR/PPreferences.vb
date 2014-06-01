@@ -6,7 +6,7 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         My.Settings.Reset()
-        MsgBox("DogeCoin-Live will now restart! Please click Ok.")
+        MsgBox("LWAR will now restart! Please click Ok.")
         Application.Restart()
     End Sub
 End Class

@@ -65,19 +65,19 @@ Partial Class LWAR
         Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.MainMenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.FileToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuitLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
-        Me.PreferencesToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SubmitFeedbackToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.DocumentationToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemFile = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemFileQuit = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemTools = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemToolsPreferences = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelp = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpSubmitFeedback = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpDocumentation = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ProjectsSiteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.SourceCodeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpProjectsSite = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpSourceCode = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
-        Me.CheckForUpdatesToolStripMenuItemCurrent = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutLWARToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpCheckForUpdates = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItemHelpAbout = New System.Windows.Forms.ToolStripMenuItem()
         Me.btnStart = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnHide = New System.Windows.Forms.Button()
@@ -406,103 +406,103 @@ Partial Class LWAR
         '
         'MainMenuStrip
         '
-        Me.MainMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItemCurrent, Me.ToolsToolStripMenuItemCurrent, Me.HelpToolStripMenuItemCurrent})
+        Me.MainMenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemFile, Me.ToolStripMenuItemTools, Me.ToolStripMenuItemHelp})
         Me.MainMenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MainMenuStrip.Name = "MainMenuStrip"
         Me.MainMenuStrip.Size = New System.Drawing.Size(554, 24)
         Me.MainMenuStrip.TabIndex = 11
         Me.MainMenuStrip.Text = "MainMenuStrip"
         '
-        'FileToolStripMenuItemCurrent
+        'ToolStripMenuItemFile
         '
-        Me.FileToolStripMenuItemCurrent.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuitLWARToolStripMenuItem})
-        Me.FileToolStripMenuItemCurrent.Name = "FileToolStripMenuItemCurrent"
-        Me.FileToolStripMenuItemCurrent.Size = New System.Drawing.Size(38, 20)
-        Me.FileToolStripMenuItemCurrent.Text = "&File"
+        Me.ToolStripMenuItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemFileQuit})
+        Me.ToolStripMenuItemFile.Name = "ToolStripMenuItemFile"
+        Me.ToolStripMenuItemFile.Size = New System.Drawing.Size(38, 20)
+        Me.ToolStripMenuItemFile.Text = "&File"
         '
-        'QuitLWARToolStripMenuItem
+        'ToolStripMenuItemFileQuit
         '
-        Me.QuitLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
-        Me.QuitLWARToolStripMenuItem.Name = "QuitLWARToolStripMenuItem"
-        Me.QuitLWARToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
-        Me.QuitLWARToolStripMenuItem.Text = "&Quit LWAR"
-        Me.QuitLWARToolStripMenuItem.ToolTipText = "Closes LWAR"
+        Me.ToolStripMenuItemFileQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
+        Me.ToolStripMenuItemFileQuit.Name = "ToolStripMenuItemFileQuit"
+        Me.ToolStripMenuItemFileQuit.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemFileQuit.Text = "&Quit LWAR"
+        Me.ToolStripMenuItemFileQuit.ToolTipText = "Closes LWAR"
         '
-        'ToolsToolStripMenuItemCurrent
+        'ToolStripMenuItemTools
         '
-        Me.ToolsToolStripMenuItemCurrent.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PreferencesToolStripMenuItemCurrent})
-        Me.ToolsToolStripMenuItemCurrent.Name = "ToolsToolStripMenuItemCurrent"
-        Me.ToolsToolStripMenuItemCurrent.Size = New System.Drawing.Size(49, 20)
-        Me.ToolsToolStripMenuItemCurrent.Text = "&Tools"
+        Me.ToolStripMenuItemTools.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemToolsPreferences})
+        Me.ToolStripMenuItemTools.Name = "ToolStripMenuItemTools"
+        Me.ToolStripMenuItemTools.Size = New System.Drawing.Size(49, 20)
+        Me.ToolStripMenuItemTools.Text = "&Tools"
         '
-        'PreferencesToolStripMenuItemCurrent
+        'ToolStripMenuItemToolsPreferences
         '
-        Me.PreferencesToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
-        Me.PreferencesToolStripMenuItemCurrent.Name = "PreferencesToolStripMenuItemCurrent"
-        Me.PreferencesToolStripMenuItemCurrent.Size = New System.Drawing.Size(142, 22)
-        Me.PreferencesToolStripMenuItemCurrent.Text = "&Preferences"
-        Me.PreferencesToolStripMenuItemCurrent.ToolTipText = "Tweak LWAR to your needs"
+        Me.ToolStripMenuItemToolsPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
+        Me.ToolStripMenuItemToolsPreferences.Name = "ToolStripMenuItemToolsPreferences"
+        Me.ToolStripMenuItemToolsPreferences.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemToolsPreferences.Text = "&Preferences"
+        Me.ToolStripMenuItemToolsPreferences.ToolTipText = "Tweak LWAR to your needs"
         '
-        'HelpToolStripMenuItemCurrent
+        'ToolStripMenuItemHelp
         '
-        Me.HelpToolStripMenuItemCurrent.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubmitFeedbackToolStripMenuItem, Me.DocumentationToolStripMenuItemCurrent, Me.ToolStripSeparator5, Me.ProjectsSiteToolStripMenuItem, Me.SourceCodeToolStripMenuItem, Me.ToolStripSeparator6, Me.CheckForUpdatesToolStripMenuItemCurrent, Me.AboutLWARToolStripMenuItem})
-        Me.HelpToolStripMenuItemCurrent.Name = "HelpToolStripMenuItemCurrent"
-        Me.HelpToolStripMenuItemCurrent.Size = New System.Drawing.Size(44, 20)
-        Me.HelpToolStripMenuItemCurrent.Text = "&Help"
+        Me.ToolStripMenuItemHelp.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemHelpSubmitFeedback, Me.ToolStripMenuItemHelpDocumentation, Me.ToolStripSeparator5, Me.ToolStripMenuItemHelpProjectsSite, Me.ToolStripMenuItemHelpSourceCode, Me.ToolStripSeparator6, Me.ToolStripMenuItemHelpCheckForUpdates, Me.ToolStripMenuItemHelpAbout})
+        Me.ToolStripMenuItemHelp.Name = "ToolStripMenuItemHelp"
+        Me.ToolStripMenuItemHelp.Size = New System.Drawing.Size(44, 20)
+        Me.ToolStripMenuItemHelp.Text = "&Help"
         '
-        'SubmitFeedbackToolStripMenuItem
+        'ToolStripMenuItemHelpSubmitFeedback
         '
-        Me.SubmitFeedbackToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
-        Me.SubmitFeedbackToolStripMenuItem.Name = "SubmitFeedbackToolStripMenuItem"
-        Me.SubmitFeedbackToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.SubmitFeedbackToolStripMenuItem.Text = "Submit &feedback"
-        Me.SubmitFeedbackToolStripMenuItem.ToolTipText = "Submit issues, feedback and requests"
+        Me.ToolStripMenuItemHelpSubmitFeedback.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
+        Me.ToolStripMenuItemHelpSubmitFeedback.Name = "ToolStripMenuItemHelpSubmitFeedback"
+        Me.ToolStripMenuItemHelpSubmitFeedback.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpSubmitFeedback.Text = "Submit &feedback"
+        Me.ToolStripMenuItemHelpSubmitFeedback.ToolTipText = "Submit issues, feedback and requests"
         '
-        'DocumentationToolStripMenuItemCurrent
+        'ToolStripMenuItemHelpDocumentation
         '
-        Me.DocumentationToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
-        Me.DocumentationToolStripMenuItemCurrent.Name = "DocumentationToolStripMenuItemCurrent"
-        Me.DocumentationToolStripMenuItemCurrent.Size = New System.Drawing.Size(179, 22)
-        Me.DocumentationToolStripMenuItemCurrent.Text = "&Documentation"
+        Me.ToolStripMenuItemHelpDocumentation.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
+        Me.ToolStripMenuItemHelpDocumentation.Name = "ToolStripMenuItemHelpDocumentation"
+        Me.ToolStripMenuItemHelpDocumentation.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpDocumentation.Text = "&Documentation"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
         Me.ToolStripSeparator5.Size = New System.Drawing.Size(176, 6)
         '
-        'ProjectsSiteToolStripMenuItem
+        'ToolStripMenuItemHelpProjectsSite
         '
-        Me.ProjectsSiteToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1371846583_internet_web_browser
-        Me.ProjectsSiteToolStripMenuItem.Name = "ProjectsSiteToolStripMenuItem"
-        Me.ProjectsSiteToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.ProjectsSiteToolStripMenuItem.Text = "&Projects site"
+        Me.ToolStripMenuItemHelpProjectsSite.Image = Global.LWAR.My.Resources.Resources._1371846583_internet_web_browser
+        Me.ToolStripMenuItemHelpProjectsSite.Name = "ToolStripMenuItemHelpProjectsSite"
+        Me.ToolStripMenuItemHelpProjectsSite.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpProjectsSite.Text = "&Projects site"
         '
-        'SourceCodeToolStripMenuItem
+        'ToolStripMenuItemHelpSourceCode
         '
-        Me.SourceCodeToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1398638918_document_properties
-        Me.SourceCodeToolStripMenuItem.Name = "SourceCodeToolStripMenuItem"
-        Me.SourceCodeToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.SourceCodeToolStripMenuItem.Text = "&Source code"
+        Me.ToolStripMenuItemHelpSourceCode.Image = Global.LWAR.My.Resources.Resources._1398638918_document_properties
+        Me.ToolStripMenuItemHelpSourceCode.Name = "ToolStripMenuItemHelpSourceCode"
+        Me.ToolStripMenuItemHelpSourceCode.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpSourceCode.Text = "&Source code"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
         Me.ToolStripSeparator6.Size = New System.Drawing.Size(176, 6)
         '
-        'CheckForUpdatesToolStripMenuItemCurrent
+        'ToolStripMenuItemHelpCheckForUpdates
         '
-        Me.CheckForUpdatesToolStripMenuItemCurrent.Image = Global.LWAR.My.Resources.Resources._1371833577_view_refresh
-        Me.CheckForUpdatesToolStripMenuItemCurrent.Name = "CheckForUpdatesToolStripMenuItemCurrent"
-        Me.CheckForUpdatesToolStripMenuItemCurrent.Size = New System.Drawing.Size(179, 22)
-        Me.CheckForUpdatesToolStripMenuItemCurrent.Text = "&Check for updates"
+        Me.ToolStripMenuItemHelpCheckForUpdates.Image = Global.LWAR.My.Resources.Resources._1371833577_view_refresh
+        Me.ToolStripMenuItemHelpCheckForUpdates.Name = "ToolStripMenuItemHelpCheckForUpdates"
+        Me.ToolStripMenuItemHelpCheckForUpdates.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpCheckForUpdates.Text = "&Check for updates"
         '
-        'AboutLWARToolStripMenuItem
+        'ToolStripMenuItemHelpAbout
         '
-        Me.AboutLWARToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
-        Me.AboutLWARToolStripMenuItem.Name = "AboutLWARToolStripMenuItem"
-        Me.AboutLWARToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.AboutLWARToolStripMenuItem.Size = New System.Drawing.Size(179, 22)
-        Me.AboutLWARToolStripMenuItem.Text = "&About LWAR"
+        Me.ToolStripMenuItemHelpAbout.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
+        Me.ToolStripMenuItemHelpAbout.Name = "ToolStripMenuItemHelpAbout"
+        Me.ToolStripMenuItemHelpAbout.ShortcutKeys = System.Windows.Forms.Keys.F1
+        Me.ToolStripMenuItemHelpAbout.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpAbout.Text = "&About LWAR"
         '
         'btnStart
         '
@@ -626,20 +626,20 @@ Partial Class LWAR
     Friend WithEvents CheckForIpdatesToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents AboutLWARToolStripMenuItem1 As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MainMenuStrip As System.Windows.Forms.MenuStrip
-    Friend WithEvents FileToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents QuitLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ToolsToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents PreferencesToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents DocumentationToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemFile As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemFileQuit As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemTools As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemToolsPreferences As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelp As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpDocumentation As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ProjectsSiteToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents SourceCodeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpProjectsSite As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpSourceCode As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents CheckForUpdatesToolStripMenuItemCurrent As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents AboutLWARToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpCheckForUpdates As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpAbout As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents btnClear As System.Windows.Forms.Button
-    Friend WithEvents SubmitFeedbackToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItemHelpSubmitFeedback As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents NotificationContextStart As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
 

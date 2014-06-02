@@ -52,7 +52,7 @@
     'open webpages
 
     Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpProjectsSite.Click
-        Process.Start("https://campustools.github.io/LWAR")
+        Process.Start("http://campustools.github.io/LWAR")  'NO HTTPS FOR *.GITHUB.IO!!!!!
     End Sub
 
     Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpSourceCode.Click
@@ -90,24 +90,22 @@
         End If
         If txtUsername.Text = "" Or txtPassword.Text = "" Or txtFile.Text = "" Then
             MsgBox("Please fill in the text fields!", MsgBoxStyle.Critical)
+        ElseIf txtDomain.Text = "" Then
+            NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' ...", ToolTipIcon.Info)
+            Try
+                LoadSecureString(txtPassword.Text)
+                Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, Nothing)
+            Catch ex As Exception
+                MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
+            End Try
         Else
-            If txtDomain.Text = "" Then
-                NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' ...", ToolTipIcon.Info)
-                Try
-                    LoadSecureString(txtPassword.Text)
-                    Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, Nothing)
-                Catch ex As Exception
-                    MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
-                End Try
-            Else
-                NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' on domain '" & txtDomain.Text & "' ...", ToolTipIcon.Info)
-                Try
-                    LoadSecureString(txtPassword.Text)
-                    Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, txtDomain.Text)
-                Catch ex As Exception
-                    MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
-                End Try
-            End If
+            NotifyIcon.ShowBalloonTip(6000, "LWAR", "Starting '" & txtFile.Text & "' as '" & txtUsername.Text & "' on domain '" & txtDomain.Text & "' ...", ToolTipIcon.Info)
+            Try
+                LoadSecureString(txtPassword.Text)
+                Process.Start(txtFile.Text, txtUsername.Text, strSecurePass, txtDomain.Text)
+            Catch ex As Exception
+                MsgBox("There was a problem with starting the program!" & vbNewLine & "ERROR: " & ex.ToString, MsgBoxStyle.Exclamation)
+            End Try
         End If
     End Sub
 
@@ -133,7 +131,7 @@
 
     End Function
 
-    'field management
+    'field management & settings
 
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
@@ -144,6 +142,7 @@
             txtFile.Text = My.Settings.File
         End If
         If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name
+        If My.Settings.ShowPassword = True Then txtPassword.PasswordChar = "" Else txtPassword.PasswordChar = "●"
     End Sub
 
     Private Sub ClearFields(sender As Object, e As EventArgs) Handles btnClear.Click
@@ -180,4 +179,5 @@
             My.Settings.Save()
         End If
     End Sub
+
 End Class

@@ -22,145 +22,133 @@ Partial Class Preferences
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.chkBoxRememberStartContents = New System.Windows.Forms.CheckBox()
-        Me.chkBoxHideIconWhenShowLWAR = New System.Windows.Forms.CheckBox()
-        Me.chkBoxIconShowOnStartup = New System.Windows.Forms.CheckBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.chkAutoAssignUserName = New System.Windows.Forms.CheckBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Preferences))
+        Me.btnSave = New System.Windows.Forms.Button()
+        Me.btnCancel = New System.Windows.Forms.Button()
+        Me.lblSubtext = New System.Windows.Forms.Label()
+        Me.lblHeader = New System.Windows.Forms.Label()
+        Me.imgLogo = New System.Windows.Forms.PictureBox()
+        Me.chkRememberStartContents = New System.Windows.Forms.CheckBox()
+        Me.chkIconHideOnShowLWAR = New System.Windows.Forms.CheckBox()
+        Me.chkIconShowOnStartup = New System.Windows.Forms.CheckBox()
+        Me.grpMain = New System.Windows.Forms.GroupBox()
+        Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.chkBetaUpdateChannel = New System.Windows.Forms.CheckBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
-        Me.Panel1.SuspendLayout()
+        Me.chkAutoAssignUsername = New System.Windows.Forms.CheckBox()
+        Me.pnlTop = New System.Windows.Forms.Panel()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpMain.SuspendLayout()
+        Me.pnlTop.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Button3
+        'btnSave
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 439)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(106, 29)
-        Me.Button3.TabIndex = 74
-        Me.Button3.Text = "&Reset"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnSave.Location = New System.Drawing.Point(237, 269)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(106, 29)
+        Me.btnSave.TabIndex = 73
+        Me.btnSave.Text = "&Save"
+        Me.btnSave.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnCancel
         '
-        Me.Button2.Location = New System.Drawing.Point(237, 439)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 29)
-        Me.Button2.TabIndex = 73
-        Me.Button2.Text = "&Apply"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnCancel.Location = New System.Drawing.Point(349, 269)
+        Me.btnCancel.Name = "btnCancel"
+        Me.btnCancel.Size = New System.Drawing.Size(106, 29)
+        Me.btnCancel.TabIndex = 70
+        Me.btnCancel.Text = "&Cancel"
+        Me.btnCancel.UseVisualStyleBackColor = True
         '
-        'Button1
+        'lblSubtext
         '
-        Me.Button1.Location = New System.Drawing.Point(349, 439)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(106, 29)
-        Me.Button1.TabIndex = 70
-        Me.Button1.Text = "&Done"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.lblSubtext.AutoSize = True
+        Me.lblSubtext.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblSubtext.Location = New System.Drawing.Point(124, 38)
+        Me.lblSubtext.Name = "lblSubtext"
+        Me.lblSubtext.Size = New System.Drawing.Size(193, 18)
+        Me.lblSubtext.TabIndex = 2
+        Me.lblSubtext.Text = "Tweak LWAR to your needs"
         '
-        'Label2
+        'lblHeader
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(196, 32)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(193, 18)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Tweak LWAR to your needs"
+        Me.lblHeader.AutoSize = True
+        Me.lblHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblHeader.Location = New System.Drawing.Point(124, 9)
+        Me.lblHeader.Name = "lblHeader"
+        Me.lblHeader.Size = New System.Drawing.Size(144, 29)
+        Me.lblHeader.TabIndex = 1
+        Me.lblHeader.Text = "Preferences"
         '
-        'Label1
+        'imgLogo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(194, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(144, 29)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Preferences"
+        Me.imgLogo.Image = Global.LWAR.My.Resources.Resources._1400410566_application_pgp_signature
+        Me.imgLogo.Location = New System.Drawing.Point(3, 3)
+        Me.imgLogo.Name = "imgLogo"
+        Me.imgLogo.Size = New System.Drawing.Size(115, 94)
+        Me.imgLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.imgLogo.TabIndex = 0
+        Me.imgLogo.TabStop = False
         '
-        'PictureBox1
+        'chkRememberStartContents
         '
-        Me.PictureBox1.Image = Global.LWAR.My.Resources.Resources._1400410566_application_pgp_signature
-        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(185, 94)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.chkRememberStartContents.AutoSize = True
+        Me.chkRememberStartContents.Location = New System.Drawing.Point(6, 65)
+        Me.chkRememberStartContents.Name = "chkRememberStartContents"
+        Me.chkRememberStartContents.Size = New System.Drawing.Size(143, 17)
+        Me.chkRememberStartContents.TabIndex = 2
+        Me.chkRememberStartContents.Text = "Remember Starting fields"
+        Me.chkRememberStartContents.UseVisualStyleBackColor = True
         '
-        'chkBoxRememberStartContents
+        'chkIconHideOnShowLWAR
         '
-        Me.chkBoxRememberStartContents.AutoSize = True
-        Me.chkBoxRememberStartContents.Location = New System.Drawing.Point(6, 65)
-        Me.chkBoxRememberStartContents.Name = "chkBoxRememberStartContents"
-        Me.chkBoxRememberStartContents.Size = New System.Drawing.Size(143, 17)
-        Me.chkBoxRememberStartContents.TabIndex = 2
-        Me.chkBoxRememberStartContents.Text = "Remember Starting fields"
-        Me.chkBoxRememberStartContents.UseVisualStyleBackColor = True
+        Me.chkIconHideOnShowLWAR.AutoSize = True
+        Me.chkIconHideOnShowLWAR.Location = New System.Drawing.Point(6, 42)
+        Me.chkIconHideOnShowLWAR.Name = "chkIconHideOnShowLWAR"
+        Me.chkIconHideOnShowLWAR.Size = New System.Drawing.Size(177, 17)
+        Me.chkIconHideOnShowLWAR.TabIndex = 1
+        Me.chkIconHideOnShowLWAR.Text = "Hide icon when showing LWAR"
+        Me.chkIconHideOnShowLWAR.UseVisualStyleBackColor = True
         '
-        'chkBoxHideIconWhenShowLWAR
+        'chkIconShowOnStartup
         '
-        Me.chkBoxHideIconWhenShowLWAR.AutoSize = True
-        Me.chkBoxHideIconWhenShowLWAR.Location = New System.Drawing.Point(6, 42)
-        Me.chkBoxHideIconWhenShowLWAR.Name = "chkBoxHideIconWhenShowLWAR"
-        Me.chkBoxHideIconWhenShowLWAR.Size = New System.Drawing.Size(177, 17)
-        Me.chkBoxHideIconWhenShowLWAR.TabIndex = 1
-        Me.chkBoxHideIconWhenShowLWAR.Text = "Hide icon when showing LWAR"
-        Me.chkBoxHideIconWhenShowLWAR.UseVisualStyleBackColor = True
+        Me.chkIconShowOnStartup.AutoSize = True
+        Me.chkIconShowOnStartup.Location = New System.Drawing.Point(6, 19)
+        Me.chkIconShowOnStartup.Name = "chkIconShowOnStartup"
+        Me.chkIconShowOnStartup.Size = New System.Drawing.Size(167, 17)
+        Me.chkIconShowOnStartup.TabIndex = 0
+        Me.chkIconShowOnStartup.Text = "Show icon on program startup"
+        Me.chkIconShowOnStartup.UseVisualStyleBackColor = True
         '
-        'chkBoxIconShowOnStartup
+        'grpMain
         '
-        Me.chkBoxIconShowOnStartup.AutoSize = True
-        Me.chkBoxIconShowOnStartup.Location = New System.Drawing.Point(6, 19)
-        Me.chkBoxIconShowOnStartup.Name = "chkBoxIconShowOnStartup"
-        Me.chkBoxIconShowOnStartup.Size = New System.Drawing.Size(167, 17)
-        Me.chkBoxIconShowOnStartup.TabIndex = 0
-        Me.chkBoxIconShowOnStartup.Text = "Show icon on program startup"
-        Me.chkBoxIconShowOnStartup.UseVisualStyleBackColor = True
+        Me.grpMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpMain.Controls.Add(Me.chkShowPassword)
+        Me.grpMain.Controls.Add(Me.chkBetaUpdateChannel)
+        Me.grpMain.Controls.Add(Me.chkAutoAssignUsername)
+        Me.grpMain.Controls.Add(Me.chkRememberStartContents)
+        Me.grpMain.Controls.Add(Me.chkIconHideOnShowLWAR)
+        Me.grpMain.Controls.Add(Me.chkIconShowOnStartup)
+        Me.grpMain.Location = New System.Drawing.Point(12, 106)
+        Me.grpMain.Name = "grpMain"
+        Me.grpMain.Size = New System.Drawing.Size(443, 157)
+        Me.grpMain.TabIndex = 72
+        Me.grpMain.TabStop = False
+        Me.grpMain.Text = "Preferences"
         '
-        'GroupBox1
+        'chkShowPassword
         '
-        Me.GroupBox1.Controls.Add(Me.chkBetaUpdateChannel)
-        Me.GroupBox1.Controls.Add(Me.chkAutoAssignUserName)
-        Me.GroupBox1.Controls.Add(Me.chkBoxRememberStartContents)
-        Me.GroupBox1.Controls.Add(Me.chkBoxHideIconWhenShowLWAR)
-        Me.GroupBox1.Controls.Add(Me.chkBoxIconShowOnStartup)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 106)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(443, 327)
-        Me.GroupBox1.TabIndex = 72
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Preferences"
-        '
-        'chkAutoAssignUserName
-        '
-        Me.chkAutoAssignUserName.AutoSize = True
-        Me.chkAutoAssignUserName.Location = New System.Drawing.Point(6, 88)
-        Me.chkAutoAssignUserName.Name = "chkAutoAssignUserName"
-        Me.chkAutoAssignUserName.Size = New System.Drawing.Size(270, 17)
-        Me.chkAutoAssignUserName.TabIndex = 3
-        Me.chkAutoAssignUserName.Text = "Automatically fill the username field with current user"
-        Me.chkAutoAssignUserName.UseVisualStyleBackColor = True
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(467, 100)
-        Me.Panel1.TabIndex = 71
+        Me.chkShowPassword.AutoSize = True
+        Me.chkShowPassword.Location = New System.Drawing.Point(6, 134)
+        Me.chkShowPassword.Name = "chkShowPassword"
+        Me.chkShowPassword.Size = New System.Drawing.Size(102, 17)
+        Me.chkShowPassword.TabIndex = 5
+        Me.chkShowPassword.Text = "Show Password"
+        Me.chkShowPassword.UseVisualStyleBackColor = True
         '
         'chkBetaUpdateChannel
         '
@@ -172,43 +160,67 @@ Partial Class Preferences
         Me.chkBetaUpdateChannel.Text = "Join beta update channel"
         Me.chkBetaUpdateChannel.UseVisualStyleBackColor = True
         '
+        'chkAutoAssignUsername
+        '
+        Me.chkAutoAssignUsername.AutoSize = True
+        Me.chkAutoAssignUsername.Location = New System.Drawing.Point(6, 88)
+        Me.chkAutoAssignUsername.Name = "chkAutoAssignUsername"
+        Me.chkAutoAssignUsername.Size = New System.Drawing.Size(270, 17)
+        Me.chkAutoAssignUsername.TabIndex = 3
+        Me.chkAutoAssignUsername.Text = "Automatically fill the username field with current user"
+        Me.chkAutoAssignUsername.UseVisualStyleBackColor = True
+        '
+        'pnlTop
+        '
+        Me.pnlTop.BackColor = System.Drawing.Color.White
+        Me.pnlTop.Controls.Add(Me.lblSubtext)
+        Me.pnlTop.Controls.Add(Me.lblHeader)
+        Me.pnlTop.Controls.Add(Me.imgLogo)
+        Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.pnlTop.Location = New System.Drawing.Point(0, 0)
+        Me.pnlTop.Name = "pnlTop"
+        Me.pnlTop.Size = New System.Drawing.Size(467, 100)
+        Me.pnlTop.TabIndex = 71
+        '
         'Preferences
         '
+        Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(467, 480)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.GroupBox1)
-        Me.Controls.Add(Me.Panel1)
+        Me.CancelButton = Me.btnCancel
+        Me.ClientSize = New System.Drawing.Size(467, 310)
+        Me.Controls.Add(Me.btnSave)
+        Me.Controls.Add(Me.btnCancel)
+        Me.Controls.Add(Me.grpMain)
+        Me.Controls.Add(Me.pnlTop)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.HelpButton = True
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Preferences"
-        Me.ShowIcon = False
-        Me.ShowInTaskbar = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Preferences"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
+        CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpMain.ResumeLayout(False)
+        Me.grpMain.PerformLayout()
+        Me.pnlTop.ResumeLayout(False)
+        Me.pnlTop.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Label2 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
-    Friend WithEvents chkBoxRememberStartContents As System.Windows.Forms.CheckBox
-    Friend WithEvents chkBoxHideIconWhenShowLWAR As System.Windows.Forms.CheckBox
-    Friend WithEvents chkBoxIconShowOnStartup As System.Windows.Forms.CheckBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents chkAutoAssignUserName As System.Windows.Forms.CheckBox
+    Friend WithEvents btnSave As System.Windows.Forms.Button
+    Friend WithEvents btnCancel As System.Windows.Forms.Button
+    Friend WithEvents lblSubtext As System.Windows.Forms.Label
+    Friend WithEvents lblHeader As System.Windows.Forms.Label
+    Friend WithEvents imgLogo As System.Windows.Forms.PictureBox
+    Friend WithEvents chkRememberStartContents As System.Windows.Forms.CheckBox
+    Friend WithEvents chkIconHideOnShowLWAR As System.Windows.Forms.CheckBox
+    Friend WithEvents chkIconShowOnStartup As System.Windows.Forms.CheckBox
+    Friend WithEvents grpMain As System.Windows.Forms.GroupBox
+    Friend WithEvents pnlTop As System.Windows.Forms.Panel
+    Friend WithEvents chkAutoAssignUsername As System.Windows.Forms.CheckBox
     Friend WithEvents chkBetaUpdateChannel As System.Windows.Forms.CheckBox
+    Friend WithEvents chkShowPassword As System.Windows.Forms.CheckBox
 End Class

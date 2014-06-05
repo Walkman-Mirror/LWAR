@@ -424,7 +424,7 @@ Partial Class LWAR
         '
         Me.ToolStripMenuItemFileQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.ToolStripMenuItemFileQuit.Name = "ToolStripMenuItemFileQuit"
-        Me.ToolStripMenuItemFileQuit.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemFileQuit.Size = New System.Drawing.Size(134, 22)
         Me.ToolStripMenuItemFileQuit.Text = "&Quit LWAR"
         Me.ToolStripMenuItemFileQuit.ToolTipText = "Closes LWAR"
         '
@@ -439,7 +439,7 @@ Partial Class LWAR
         '
         Me.ToolStripMenuItemToolsPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.ToolStripMenuItemToolsPreferences.Name = "ToolStripMenuItemToolsPreferences"
-        Me.ToolStripMenuItemToolsPreferences.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemToolsPreferences.Size = New System.Drawing.Size(142, 22)
         Me.ToolStripMenuItemToolsPreferences.Text = "&Preferences"
         Me.ToolStripMenuItemToolsPreferences.ToolTipText = "Tweak LWAR to your needs"
         '
@@ -532,6 +532,7 @@ Partial Class LWAR
         'btnHide
         '
         Me.btnHide.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnHide.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.btnHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
         Me.btnHide.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnHide.Location = New System.Drawing.Point(12, 301)
@@ -558,7 +559,7 @@ Partial Class LWAR
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.AutoSize = True
-        Me.CancelButton = Me.btnCancel
+        Me.CancelButton = Me.btnHide
         Me.ClientSize = New System.Drawing.Size(554, 336)
         Me.Controls.Add(Me.MainMenuStrip)
         Me.Controls.Add(Me.grpBoxStart)

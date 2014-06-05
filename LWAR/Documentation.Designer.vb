@@ -23,6 +23,7 @@ Partial Class Documentation
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Documentation))
         Me.StatusText_timer = New System.Windows.Forms.Timer(Me.components)
         Me.FrontPgaeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
@@ -58,6 +59,7 @@ Partial Class Documentation
         Me.StatusText_label = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.ToolStrip1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -70,53 +72,53 @@ Partial Class Documentation
         'FrontPgaeToolStripMenuItem
         '
         Me.FrontPgaeToolStripMenuItem.Name = "FrontPgaeToolStripMenuItem"
-        Me.FrontPgaeToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.FrontPgaeToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.FrontPgaeToolStripMenuItem.Text = "&Home"
         '
         'ToolStripSeparator1
         '
         Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(140, 6)
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(133, 6)
         '
         'ForwardToolStripMenuItem
         '
         Me.ForwardToolStripMenuItem.Name = "ForwardToolStripMenuItem"
-        Me.ForwardToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.ForwardToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.ForwardToolStripMenuItem.Text = "&Forward"
         '
         'BackToolStripMenuItem
         '
         Me.BackToolStripMenuItem.Name = "BackToolStripMenuItem"
-        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.BackToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.BackToolStripMenuItem.Text = "&Back"
         '
         'ContextMenuStrip1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BackToolStripMenuItem, Me.ForwardToolStripMenuItem, Me.ToolStripSeparator1, Me.FrontPgaeToolStripMenuItem, Me.PagesIndexToolStripMenuItem, Me.ToolStripSeparator5, Me.RefreshToolStripMenuItem, Me.StopToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(144, 148)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(137, 148)
         '
         'PagesIndexToolStripMenuItem
         '
         Me.PagesIndexToolStripMenuItem.Name = "PagesIndexToolStripMenuItem"
-        Me.PagesIndexToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.PagesIndexToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.PagesIndexToolStripMenuItem.Text = "&Pages index"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(140, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(133, 6)
         '
         'RefreshToolStripMenuItem
         '
         Me.RefreshToolStripMenuItem.Name = "RefreshToolStripMenuItem"
-        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.RefreshToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.RefreshToolStripMenuItem.Text = "&Refresh"
         '
         'StopToolStripMenuItem
         '
         Me.StopToolStripMenuItem.Name = "StopToolStripMenuItem"
-        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(143, 22)
+        Me.StopToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.StopToolStripMenuItem.Text = "&Stop"
         '
         'WebBrowser
@@ -139,7 +141,7 @@ Partial Class Documentation
         'ToolStrip1
         '
         Me.ToolStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonBack, Me.ToolStripButtonForward, Me.ToolStripSeparator3, Me.ToolStripTxtURL, Me.ToolStripSeparator6, Me.ToolStripButtonHome, Me.ToolStripButtonRefresh, Me.ToolStripSeparator4, Me.ToolStripButtonStop, Me.ToolStripSeparator7, Me.PageTitle})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButtonBack, Me.ToolStripButtonForward, Me.ToolStripSeparator3, Me.ToolStripTxtURL, Me.ToolStripButton1, Me.ToolStripSeparator6, Me.ToolStripButtonHome, Me.ToolStripButtonRefresh, Me.ToolStripSeparator4, Me.ToolStripButtonStop, Me.ToolStripSeparator7, Me.PageTitle})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(844, 25)
@@ -219,50 +221,50 @@ Partial Class Documentation
         'ToolStripMenuItemNavPagesIndex
         '
         Me.ToolStripMenuItemNavPagesIndex.Name = "ToolStripMenuItemNavPagesIndex"
-        Me.ToolStripMenuItemNavPagesIndex.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemNavPagesIndex.Size = New System.Drawing.Size(136, 22)
         Me.ToolStripMenuItemNavPagesIndex.Text = "&Pages index"
         '
         'ToolStripMenuItemNavHome
         '
         Me.ToolStripMenuItemNavHome.Name = "ToolStripMenuItemNavHome"
-        Me.ToolStripMenuItemNavHome.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemNavHome.Size = New System.Drawing.Size(136, 22)
         Me.ToolStripMenuItemNavHome.Text = "&Home"
         '
         'ToolStripSeparator2
         '
         Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
-        Me.ToolStripSeparator2.Size = New System.Drawing.Size(149, 6)
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(133, 6)
         '
         'ToolStripMenuItemNavForward
         '
         Me.ToolStripMenuItemNavForward.Name = "ToolStripMenuItemNavForward"
-        Me.ToolStripMenuItemNavForward.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemNavForward.Size = New System.Drawing.Size(136, 22)
         Me.ToolStripMenuItemNavForward.Text = "&Forward"
         '
         'ToolStripMenuItemNavBack
         '
         Me.ToolStripMenuItemNavBack.Name = "ToolStripMenuItemNavBack"
-        Me.ToolStripMenuItemNavBack.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemNavBack.Size = New System.Drawing.Size(136, 22)
         Me.ToolStripMenuItemNavBack.Text = "&Back"
         '
         'ToolStripMenuItemNav
         '
         Me.ToolStripMenuItemNav.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemNavBack, Me.ToolStripMenuItemNavForward, Me.ToolStripSeparator2, Me.ToolStripMenuItemNavHome, Me.ToolStripMenuItemNavPagesIndex})
         Me.ToolStripMenuItemNav.Name = "ToolStripMenuItemNav"
-        Me.ToolStripMenuItemNav.Size = New System.Drawing.Size(79, 20)
+        Me.ToolStripMenuItemNav.Size = New System.Drawing.Size(77, 20)
         Me.ToolStripMenuItemNav.Text = "&Navigation"
         '
         'ToolStripMenuItemFileClose
         '
         Me.ToolStripMenuItemFileClose.Name = "ToolStripMenuItemFileClose"
-        Me.ToolStripMenuItemFileClose.Size = New System.Drawing.Size(152, 22)
+        Me.ToolStripMenuItemFileClose.Size = New System.Drawing.Size(103, 22)
         Me.ToolStripMenuItemFileClose.Text = "&Close"
         '
         'ToolStripMenuItemFile
         '
         Me.ToolStripMenuItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemFileClose})
         Me.ToolStripMenuItemFile.Name = "ToolStripMenuItemFile"
-        Me.ToolStripMenuItemFile.Size = New System.Drawing.Size(38, 20)
+        Me.ToolStripMenuItemFile.Size = New System.Drawing.Size(37, 20)
         Me.ToolStripMenuItemFile.Text = "&File"
         '
         'MenuStrip1
@@ -294,6 +296,15 @@ Partial Class Documentation
         Me.StatusStrip.Size = New System.Drawing.Size(844, 22)
         Me.StatusStrip.TabIndex = 4
         Me.StatusStrip.Text = "StatusStrip1"
+        '
+        'ToolStripButton1
+        '
+        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
+        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton1.Name = "ToolStripButton1"
+        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
+        Me.ToolStripButton1.Text = "ToolStripButton1"
         '
         'Documentation
         '
@@ -354,4 +365,5 @@ Partial Class Documentation
     Friend WithEvents ToolStripTxtURL As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripSeparator7 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
 End Class

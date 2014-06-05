@@ -22,7 +22,7 @@
     End Sub
 
     Private Sub StatusText_timer_Tick(sender As Object, e As EventArgs) Handles StatusText_timer.Tick
-        StatusText_label.Text = WebBrowser.StatusText.ToString
+        StatusText_label.Text = WebBrowser.StatusText
     End Sub
 
     Private Sub PagesIndexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagesIndexToolStripMenuItem.Click
@@ -35,7 +35,7 @@
 
     Private Sub WebBrowser1_DocumentCompleted(sender As Object, e As WebBrowserDocumentCompletedEventArgs) Handles WebBrowser.DocumentCompleted
         ToolStripTxtURL.Text = WebBrowser.Url.ToString
-        PageTitle.Text = WebBrowser.DocumentTitle.ToString
+        PageTitle.Text = WebBrowser.DocumentTitle
         ToolStripProgressBar1.Visible = False
     End Sub
 
@@ -61,5 +61,9 @@
 
     Private Sub ToolStripButton5_Click(sender As Object, e As EventArgs) Handles ToolStripButtonStop.Click
         WebBrowser.Stop()
+    End Sub
+
+    Private Sub ToolStripButton1_Click(sender As Object, e As EventArgs) Handles ToolStripButton1.Click
+        WebBrowser.Navigate(ToolStripTxtURL.Text)
     End Sub
 End Class

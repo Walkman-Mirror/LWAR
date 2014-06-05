@@ -128,10 +128,6 @@
             'LoadSecureString.MakeReadOnly()                        'original line
             LWAR.strSecurePass.MakeReadOnly()                       'line from @Walkman's brain
         End If
-
-'Pretty sure there is meant to be a return code here.
-Return input
-'I do not know what I am doing in the above, see if it works
     End Function
 
     'field management & settings

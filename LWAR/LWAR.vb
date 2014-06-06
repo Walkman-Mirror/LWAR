@@ -1,4 +1,5 @@
-﻿Public Class LWAR
+﻿Imports System.IO
+Public Class LWAR
     Dim strSecurePass As System.Security.SecureString = Nothing     'See Sub LoadSecureString()
 
     'window control
@@ -12,7 +13,7 @@
             Me.Hide()
             NotifyIcon.Visible = True
             NotificationContextShowHide.Text = "&Show LWAR"
-            NotificationContextShowHide.Image = My.Resources.eye_shown 'HA! got it to work, after fiddling around for ~30 mins. go follow me on http://twitter.com/Walkman100
+            NotificationContextShowHide.Image = My.Resources.eye_shown 'HA! got it to work, after fiddling around for ~30 mins. go follow me on https://twitter.com/Walkman100
             Me.Visible = False
         Else
             Me.Show()
@@ -52,7 +53,7 @@
     'open webpages
 
     Private Sub OpenLWARProjectSite(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpProjectsSite.Click
-        Process.Start("http://campustools.github.io/LWAR")  'NO HTTPS FOR *.GITHUB.IO!!!!!
+        Process.Start("http://campustools.github.io/LWAR")
     End Sub
 
     Private Sub OpenSourceCode(sender As Object, e As EventArgs) Handles ToolStripMenuItemHelpSourceCode.Click
@@ -134,14 +135,13 @@
 
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
-        If My.Settings.RememberStartContents = True Then
-            txtUsername.Text = My.Settings.Username
-            txtPassword.Text = My.Settings.Password
-            txtDomain.Text = My.Settings.Domain
-            txtFile.Text = My.Settings.File
-        End If
+        If My.Settings.RememberStartContents = True Then txtUsername.Text = My.Settings.Username And txtPassword.Text = My.Settings.Password And txtDomain.Text = My.Settings.Domain And txtFile.Text = My.Settings.File
         If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name
         If My.Settings.ShowPassword = True Then txtPassword.PasswordChar = "" Else txtPassword.PasswordChar = "●"
+        If My.Settings.Logging = True Then
+            Dim logger As StreamWriter = New StreamWriter(My.Settings.LogTextFile)
+            logger.WriteLine("[" & DateTime.Today & "]" & "LWAR has started!")
+        End If
     End Sub
 
     Private Sub ClearFields(sender As Object, e As EventArgs) Handles btnClear.Click

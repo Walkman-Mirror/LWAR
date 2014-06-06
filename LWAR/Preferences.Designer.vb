@@ -36,6 +36,7 @@ Partial Class Preferences
         Me.chkBetaUpdateChannel = New System.Windows.Forms.CheckBox()
         Me.chkAutoAssignUsername = New System.Windows.Forms.CheckBox()
         Me.pnlTop = New System.Windows.Forms.Panel()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpMain.SuspendLayout()
         Me.pnlTop.SuspendLayout()
@@ -44,7 +45,7 @@ Partial Class Preferences
         'btnSave
         '
         Me.btnSave.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnSave.Location = New System.Drawing.Point(237, 269)
+        Me.btnSave.Location = New System.Drawing.Point(237, 302)
         Me.btnSave.Name = "btnSave"
         Me.btnSave.Size = New System.Drawing.Size(106, 29)
         Me.btnSave.TabIndex = 73
@@ -55,7 +56,7 @@ Partial Class Preferences
         '
         Me.btnCancel.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(349, 269)
+        Me.btnCancel.Location = New System.Drawing.Point(349, 302)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(106, 29)
         Me.btnCancel.TabIndex = 70
@@ -127,6 +128,7 @@ Partial Class Preferences
         Me.grpMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.grpMain.Controls.Add(Me.CheckBox1)
         Me.grpMain.Controls.Add(Me.chkShowPassword)
         Me.grpMain.Controls.Add(Me.chkBetaUpdateChannel)
         Me.grpMain.Controls.Add(Me.chkAutoAssignUsername)
@@ -135,7 +137,7 @@ Partial Class Preferences
         Me.grpMain.Controls.Add(Me.chkIconShowOnStartup)
         Me.grpMain.Location = New System.Drawing.Point(12, 106)
         Me.grpMain.Name = "grpMain"
-        Me.grpMain.Size = New System.Drawing.Size(443, 157)
+        Me.grpMain.Size = New System.Drawing.Size(443, 190)
         Me.grpMain.TabIndex = 72
         Me.grpMain.TabStop = False
         Me.grpMain.Text = "Preferences"
@@ -182,13 +184,23 @@ Partial Class Preferences
         Me.pnlTop.Size = New System.Drawing.Size(467, 100)
         Me.pnlTop.TabIndex = 71
         '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Location = New System.Drawing.Point(6, 157)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(144, 17)
+        Me.CheckBox1.TabIndex = 6
+        Me.CheckBox1.Text = "Enable logging to text file"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
         'Preferences
         '
         Me.AcceptButton = Me.btnSave
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(467, 310)
+        Me.ClientSize = New System.Drawing.Size(467, 343)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.grpMain)
@@ -223,4 +235,5 @@ Partial Class Preferences
     Friend WithEvents chkAutoAssignUsername As System.Windows.Forms.CheckBox
     Friend WithEvents chkBetaUpdateChannel As System.Windows.Forms.CheckBox
     Friend WithEvents chkShowPassword As System.Windows.Forms.CheckBox
+    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
 End Class

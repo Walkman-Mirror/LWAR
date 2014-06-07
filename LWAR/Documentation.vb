@@ -4,15 +4,15 @@
         Me.Close()
     End Sub
 
-    Private Sub BackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackToolStripMenuItem.Click
+    Private Sub BackToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BackToolStripMenuItem.Click, ToolStripMenuItemNavBack.Click
         WebBrowser.GoBack()
     End Sub
 
-    Private Sub ForwardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForwardToolStripMenuItem.Click
+    Private Sub ForwardToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ForwardToolStripMenuItem.Click, ToolStripMenuItemNavForward.Click
         WebBrowser.GoForward()
     End Sub
 
-    Private Sub Documentation_Load(sender As Object, e As EventArgs) Handles MyBase.Load, FrontPgaeToolStripMenuItem.Click
+    Private Sub Documentation_Load(sender As Object, e As EventArgs) Handles MyBase.Load, FrontPgaeToolStripMenuItem.Click, ToolStripMenuItemNavHome.Click
         StatusText_timer.Start()
         WebBrowser.Navigate("https://github.com/CampusTools/LWAR/wiki")
     End Sub
@@ -25,7 +25,7 @@
         StatusText_label.Text = WebBrowser.StatusText
     End Sub
 
-    Private Sub PagesIndexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagesIndexToolStripMenuItem.Click
+    Private Sub PagesIndexToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PagesIndexToolStripMenuItem.Click, ToolStripMenuItemNavPagesIndex.Click
         WebBrowser.Navigate("https://github.com/CampusTools/LWAR/wiki/Pages-index")
     End Sub
 
@@ -37,22 +37,6 @@
         ToolStripTxtURL.Text = WebBrowser.Url.ToString
         PageTitle.Text = WebBrowser.DocumentTitle
         ToolStripProgressBar1.Visible = False
-    End Sub
-
-    Private Sub BackToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemNavBack.Click
-        WebBrowser.GoBack()
-    End Sub
-
-    Private Sub ForwardToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemNavForward.Click
-        WebBrowser.GoForward()
-    End Sub
-
-    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemNavHome.Click
-        WebBrowser.GoHome()
-    End Sub
-
-    Private Sub PagesIndexToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItemNavPagesIndex.Click
-        WebBrowser.Navigate("https://github.com/CampusTools/LWAR/wiki/Pages-index")
     End Sub
 
     Private Sub RefreshToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RefreshToolStripMenuItem.Click, ToolStripButtonRefresh.Click

@@ -1,7 +1,6 @@
 ﻿Imports System.IO
 Public Class LWAR
     Dim strSecurePass As System.Security.SecureString = Nothing     'See Sub LoadSecureString()
-
     'window control
 
     Private Sub QuitLWAR(sender As Object, e As EventArgs) Handles btnCancel.Click, NotificationContextQuit.Click, ToolStripMenuItemFileQuit.Click
@@ -135,12 +134,19 @@ Public Class LWAR
 
     Private Sub LoadLWAR(sender As Object, e As EventArgs) Handles MyBase.Load, Me.Shown
         If My.Settings.IconOnStartup = True Then NotifyIcon.Visible = True
-        If My.Settings.RememberStartContents = True Then txtUsername.Text = My.Settings.Username And txtPassword.Text = My.Settings.Password And txtDomain.Text = My.Settings.Domain And txtFile.Text = My.Settings.File
+        If My.Settings.RememberStartContents = True Then
+            txtUsername.Text = My.Settings.Username
+            txtPassword.Text = My.Settings.Password
+            txtDomain.Text = My.Settings.Domain
+            txtFile.Text = My.Settings.File
+        End If
         If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name
         If My.Settings.ShowPassword = True Then txtPassword.PasswordChar = "" Else txtPassword.PasswordChar = "●"
         If My.Settings.Logging = True Then
-            Dim logger As StreamWriter = New StreamWriter(My.Settings.LogTextFile)
-            logger.WriteLine("[" & DateTime.Today & "]" & "LWAR has started!")
+            'Thank to DotNetPerls for this below code. Page reference: <"http://www.dotnetperls.com/streamwriter-vbnet">
+            Using logger As StreamWriter = New StreamWriter(My.Settings.LogTextFile)
+                logger.writeline("[" & DateTime.Today & "]" & "LWAR has started!")
+            End Using
         End If
     End Sub
 

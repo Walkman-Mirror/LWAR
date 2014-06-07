@@ -246,44 +246,44 @@ Partial Class LWAR
         '
         Me.NotificationContext.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NotificationContextStart, Me.ToolStripSeparator7, Me.NotificationContextShowHide, Me.NotificationContextPreferences, Me.ToolStripSeparatorNotify1, Me.NotificationContextQuit})
         Me.NotificationContext.Name = "NotificationContextMenuStrip"
-        Me.NotificationContext.Size = New System.Drawing.Size(156, 104)
+        Me.NotificationContext.Size = New System.Drawing.Size(148, 104)
         '
         'NotificationContextStart
         '
         Me.NotificationContextStart.Image = Global.LWAR.My.Resources.Resources._1371833067_go_next
         Me.NotificationContextStart.Name = "NotificationContextStart"
-        Me.NotificationContextStart.Size = New System.Drawing.Size(155, 22)
+        Me.NotificationContextStart.Size = New System.Drawing.Size(147, 22)
         Me.NotificationContextStart.Text = "&Start program"
         '
         'ToolStripSeparator7
         '
         Me.ToolStripSeparator7.Name = "ToolStripSeparator7"
-        Me.ToolStripSeparator7.Size = New System.Drawing.Size(152, 6)
+        Me.ToolStripSeparator7.Size = New System.Drawing.Size(144, 6)
         '
         'NotificationContextShowHide
         '
         Me.NotificationContextShowHide.Image = Global.LWAR.My.Resources.Resources.eye_hidden
         Me.NotificationContextShowHide.Name = "NotificationContextShowHide"
-        Me.NotificationContextShowHide.Size = New System.Drawing.Size(155, 22)
+        Me.NotificationContextShowHide.Size = New System.Drawing.Size(147, 22)
         Me.NotificationContextShowHide.Text = "&Hide LWAR"
         '
         'NotificationContextPreferences
         '
         Me.NotificationContextPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.NotificationContextPreferences.Name = "NotificationContextPreferences"
-        Me.NotificationContextPreferences.Size = New System.Drawing.Size(155, 22)
+        Me.NotificationContextPreferences.Size = New System.Drawing.Size(147, 22)
         Me.NotificationContextPreferences.Text = "&Preferences"
         '
         'ToolStripSeparatorNotify1
         '
         Me.ToolStripSeparatorNotify1.Name = "ToolStripSeparatorNotify1"
-        Me.ToolStripSeparatorNotify1.Size = New System.Drawing.Size(152, 6)
+        Me.ToolStripSeparatorNotify1.Size = New System.Drawing.Size(144, 6)
         '
         'NotificationContextQuit
         '
         Me.NotificationContextQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.NotificationContextQuit.Name = "NotificationContextQuit"
-        Me.NotificationContextQuit.Size = New System.Drawing.Size(155, 22)
+        Me.NotificationContextQuit.Size = New System.Drawing.Size(147, 22)
         Me.NotificationContextQuit.Text = "&Quit LWAR"
         '
         'OpenFileDialogBrowse
@@ -315,7 +315,7 @@ Partial Class LWAR
         '
         Me.PreferencesToolStripMenuItem.Image = Global.LWAR.My.Resources.Resources.Options
         Me.PreferencesToolStripMenuItem.Name = "PreferencesToolStripMenuItem"
-        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.PreferencesToolStripMenuItem.Size = New System.Drawing.Size(135, 22)
         Me.PreferencesToolStripMenuItem.Text = "&Preferences"
         '
         'HelpToolStripMenuItem
@@ -417,14 +417,14 @@ Partial Class LWAR
         '
         Me.ToolStripMenuItemFile.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemFileQuit})
         Me.ToolStripMenuItemFile.Name = "ToolStripMenuItemFile"
-        Me.ToolStripMenuItemFile.Size = New System.Drawing.Size(38, 20)
+        Me.ToolStripMenuItemFile.Size = New System.Drawing.Size(37, 20)
         Me.ToolStripMenuItemFile.Text = "&File"
         '
         'ToolStripMenuItemFileQuit
         '
         Me.ToolStripMenuItemFileQuit.Image = Global.LWAR.My.Resources.Resources._1387135890_system_log_out
         Me.ToolStripMenuItemFileQuit.Name = "ToolStripMenuItemFileQuit"
-        Me.ToolStripMenuItemFileQuit.Size = New System.Drawing.Size(134, 22)
+        Me.ToolStripMenuItemFileQuit.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuItemFileQuit.Text = "&Quit LWAR"
         Me.ToolStripMenuItemFileQuit.ToolTipText = "Closes LWAR"
         '
@@ -432,14 +432,14 @@ Partial Class LWAR
         '
         Me.ToolStripMenuItemTools.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripMenuItemToolsPreferences})
         Me.ToolStripMenuItemTools.Name = "ToolStripMenuItemTools"
-        Me.ToolStripMenuItemTools.Size = New System.Drawing.Size(49, 20)
+        Me.ToolStripMenuItemTools.Size = New System.Drawing.Size(48, 20)
         Me.ToolStripMenuItemTools.Text = "&Tools"
         '
         'ToolStripMenuItemToolsPreferences
         '
         Me.ToolStripMenuItemToolsPreferences.Image = Global.LWAR.My.Resources.Resources._1371856288_preferences_system
         Me.ToolStripMenuItemToolsPreferences.Name = "ToolStripMenuItemToolsPreferences"
-        Me.ToolStripMenuItemToolsPreferences.Size = New System.Drawing.Size(142, 22)
+        Me.ToolStripMenuItemToolsPreferences.Size = New System.Drawing.Size(152, 22)
         Me.ToolStripMenuItemToolsPreferences.Text = "&Preferences"
         Me.ToolStripMenuItemToolsPreferences.ToolTipText = "Tweak LWAR to your needs"
         '
@@ -454,46 +454,46 @@ Partial Class LWAR
         '
         Me.ToolStripMenuItemHelpSubmitFeedback.Image = Global.LWAR.My.Resources.Resources._1398642052_emblem_favorite
         Me.ToolStripMenuItemHelpSubmitFeedback.Name = "ToolStripMenuItemHelpSubmitFeedback"
-        Me.ToolStripMenuItemHelpSubmitFeedback.Size = New System.Drawing.Size(179, 22)
-        Me.ToolStripMenuItemHelpSubmitFeedback.Text = "Submit &feedback"
+        Me.ToolStripMenuItemHelpSubmitFeedback.Size = New System.Drawing.Size(170, 22)
+        Me.ToolStripMenuItemHelpSubmitFeedback.Text = "&Report an issue"
         Me.ToolStripMenuItemHelpSubmitFeedback.ToolTipText = "Submit issues, feedback and requests"
         '
         'ToolStripMenuItemHelpDocumentation
         '
         Me.ToolStripMenuItemHelpDocumentation.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
         Me.ToolStripMenuItemHelpDocumentation.Name = "ToolStripMenuItemHelpDocumentation"
-        Me.ToolStripMenuItemHelpDocumentation.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpDocumentation.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripMenuItemHelpDocumentation.Text = "&Documentation"
         '
         'ToolStripSeparator5
         '
         Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
-        Me.ToolStripSeparator5.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(167, 6)
         '
         'ToolStripMenuItemHelpProjectsSite
         '
         Me.ToolStripMenuItemHelpProjectsSite.Image = Global.LWAR.My.Resources.Resources._1371846583_internet_web_browser
         Me.ToolStripMenuItemHelpProjectsSite.Name = "ToolStripMenuItemHelpProjectsSite"
-        Me.ToolStripMenuItemHelpProjectsSite.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpProjectsSite.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripMenuItemHelpProjectsSite.Text = "&Projects site"
         '
         'ToolStripMenuItemHelpSourceCode
         '
         Me.ToolStripMenuItemHelpSourceCode.Image = Global.LWAR.My.Resources.Resources._1398638918_document_properties
         Me.ToolStripMenuItemHelpSourceCode.Name = "ToolStripMenuItemHelpSourceCode"
-        Me.ToolStripMenuItemHelpSourceCode.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpSourceCode.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripMenuItemHelpSourceCode.Text = "&Source code"
         '
         'ToolStripSeparator6
         '
         Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
-        Me.ToolStripSeparator6.Size = New System.Drawing.Size(176, 6)
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(167, 6)
         '
         'ToolStripMenuItemHelpCheckForUpdates
         '
         Me.ToolStripMenuItemHelpCheckForUpdates.Image = Global.LWAR.My.Resources.Resources._1371833577_view_refresh
         Me.ToolStripMenuItemHelpCheckForUpdates.Name = "ToolStripMenuItemHelpCheckForUpdates"
-        Me.ToolStripMenuItemHelpCheckForUpdates.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpCheckForUpdates.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripMenuItemHelpCheckForUpdates.Text = "&Check for updates"
         '
         'ToolStripMenuItemHelpAbout
@@ -501,7 +501,7 @@ Partial Class LWAR
         Me.ToolStripMenuItemHelpAbout.Image = Global.LWAR.My.Resources.Resources._1387141003_help_browser
         Me.ToolStripMenuItemHelpAbout.Name = "ToolStripMenuItemHelpAbout"
         Me.ToolStripMenuItemHelpAbout.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.ToolStripMenuItemHelpAbout.Size = New System.Drawing.Size(179, 22)
+        Me.ToolStripMenuItemHelpAbout.Size = New System.Drawing.Size(170, 22)
         Me.ToolStripMenuItemHelpAbout.Text = "&About LWAR"
         '
         'btnStart

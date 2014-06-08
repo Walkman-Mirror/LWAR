@@ -13,7 +13,7 @@
         My.Settings.AutoAssignUsername = chkAutoAssignUsername.Checked
         My.Settings.BetaUpdateChannel = chkBetaUpdateChannel.Checked
         My.Settings.ShowPassword = chkShowPassword.Checked
-        My.Settings.Logging = CheckBox1.Checked
+        My.Settings.Logging = chkLogging.Checked
         My.Settings.Save()
         If LWAR.Visible = True Then If My.Settings.IconHideOnShowLWAR = True Then LWAR.NotifyIcon.Visible = False Else LWAR.NotifyIcon.Visible = True
         If My.Settings.ShowPassword = True Then LWAR.txtPassword.PasswordChar = "" Else LWAR.txtPassword.PasswordChar = "●"
@@ -36,6 +36,6 @@
         If My.Settings.AutoAssignUsername = True Then chkAutoAssignUsername.Checked = True Else chkAutoAssignUsername.Checked = False
         If My.Settings.BetaUpdateChannel = True Then chkBetaUpdateChannel.Checked = True Else chkBetaUpdateChannel.Checked = False
         If My.Settings.ShowPassword = True Then chkShowPassword.Checked = True Else chkShowPassword.Checked = False
-        If My.Settings.Logging = True Then CheckBox1.Checked = True Else CheckBox1.Checked = False
+        If My.Settings.Logging = True Then chkLogging.Checked = True Else chkLogging.Checked = False
     End Sub
 End Class

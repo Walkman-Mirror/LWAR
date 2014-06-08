@@ -32,11 +32,11 @@ Partial Class Preferences
         Me.chkIconHideOnShowLWAR = New System.Windows.Forms.CheckBox()
         Me.chkIconShowOnStartup = New System.Windows.Forms.CheckBox()
         Me.grpMain = New System.Windows.Forms.GroupBox()
+        Me.chkLogging = New System.Windows.Forms.CheckBox()
         Me.chkShowPassword = New System.Windows.Forms.CheckBox()
         Me.chkBetaUpdateChannel = New System.Windows.Forms.CheckBox()
         Me.chkAutoAssignUsername = New System.Windows.Forms.CheckBox()
         Me.pnlTop = New System.Windows.Forms.Panel()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         CType(Me.imgLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.grpMain.SuspendLayout()
         Me.pnlTop.SuspendLayout()
@@ -128,7 +128,7 @@ Partial Class Preferences
         Me.grpMain.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.grpMain.Controls.Add(Me.CheckBox1)
+        Me.grpMain.Controls.Add(Me.chkLogging)
         Me.grpMain.Controls.Add(Me.chkShowPassword)
         Me.grpMain.Controls.Add(Me.chkBetaUpdateChannel)
         Me.grpMain.Controls.Add(Me.chkAutoAssignUsername)
@@ -141,6 +141,16 @@ Partial Class Preferences
         Me.grpMain.TabIndex = 72
         Me.grpMain.TabStop = False
         Me.grpMain.Text = "Preferences"
+        '
+        'chkLogging
+        '
+        Me.chkLogging.AutoSize = True
+        Me.chkLogging.Location = New System.Drawing.Point(6, 157)
+        Me.chkLogging.Name = "chkLogging"
+        Me.chkLogging.Size = New System.Drawing.Size(144, 17)
+        Me.chkLogging.TabIndex = 6
+        Me.chkLogging.Text = "Enable logging to text file"
+        Me.chkLogging.UseVisualStyleBackColor = True
         '
         'chkShowPassword
         '
@@ -184,16 +194,6 @@ Partial Class Preferences
         Me.pnlTop.Size = New System.Drawing.Size(467, 100)
         Me.pnlTop.TabIndex = 71
         '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(6, 157)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(144, 17)
-        Me.CheckBox1.TabIndex = 6
-        Me.CheckBox1.Text = "Enable logging to text file"
-        Me.CheckBox1.UseVisualStyleBackColor = True
-        '
         'Preferences
         '
         Me.AcceptButton = Me.btnSave
@@ -235,5 +235,5 @@ Partial Class Preferences
     Friend WithEvents chkAutoAssignUsername As System.Windows.Forms.CheckBox
     Friend WithEvents chkBetaUpdateChannel As System.Windows.Forms.CheckBox
     Friend WithEvents chkShowPassword As System.Windows.Forms.CheckBox
-    Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkLogging As System.Windows.Forms.CheckBox
 End Class

@@ -2,7 +2,7 @@
 ; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
 ; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
 
-AddBrandingImage top 20
+; AddBrandingImage top 20
 ; Icon LWAR\youtube_withLink.ico
 Caption "LWAR Installer"
 Name "LWAR"
@@ -31,17 +31,17 @@ SectionEnd
 
 Section "LWAR Start Menu Shortcuts"
   CreateDirectory "$SMPROGRAMS\DeavmiOSS"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "Start LWAR"
-  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall LWAR.lnk" "$INSTDIR\LWAR-Uninst.exe" "" "" "" "" "" "Uninstall LWAR"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "Start Launch With Admin Rights (LWAR)"
+  CreateShortCut "$SMPROGRAMS\DeavmiOSS\Uninstall LWAR.lnk" "$INSTDIR\LWAR-Uninst.exe" "" "" "" "" "" "Uninstall Launch With Admin Rights (LWAR)"
 ; Syntax for CreateShortCut: link.lnk target.file [parameters [icon.file [icon_index_number [start_options [keyboard_shortcut [description]]]]]]
 SectionEnd
 
 Section "LWAR Desktop Shortcut"
-  CreateShortCut "$DESKTOP\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "YouTube Video Linker"
+  CreateShortCut "$DESKTOP\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "Launch With Admin Rights (LWAR)"
 SectionEnd
 
 Section "LWAR Quick Launch Shortcut"
-  CreateShortCut "$QUICKLAUNCH\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "YouTube Video Linker"
+  CreateShortCut "$QUICKLAUNCH\LWAR.lnk" "$INSTDIR\LWAR.exe" "" "$INSTDIR\LWAR.exe" "" "" "" "Launch With Admin Rights (LWAR)"
 SectionEnd
 
 ;Section "More apps from DeavmiOSS"
@@ -77,25 +77,25 @@ Function .onInit
 FunctionEnd
 
 Function .onInstSuccess
-    MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
-      ExecShell "open" "https://github.com/CampusTools/LWAR/wiki"
-    NoReadme:
+  MessageBox MB_YESNO "Install Succeeded! Open Wiki?" IDNO NoReadme
+    ExecShell "open" "https://github.com/CampusTools/LWAR/wiki"
+  NoReadme:
 FunctionEnd
 
 ; Uninstaller
 
 Function un.onInit
-    MessageBox MB_YESNO "This will uninstall LWAR. Do you wish to continue?" IDYES NoAbort
-      Abort ; causes uninstaller to quit.
-    NoAbort:
-    SetShellVarContext all
-    SetAutoClose true
+  MessageBox MB_YESNO "This will uninstall LWAR. Do you wish to continue?" IDYES NoAbort
+    Abort ; causes uninstaller to quit.
+  NoAbort:
+  SetShellVarContext all
+  SetAutoClose true
 FunctionEnd
 
 Function un.onUninstFailed
-    MessageBox MB_OK "Uninstall Cancelled"
+  MessageBox MB_OK "Uninstall Cancelled"
 FunctionEnd
 
 Function un.onUninstSuccess
-    MessageBox MB_OK "Uninstall Completed"
+  MessageBox MB_OK "Uninstall Completed"
 FunctionEnd

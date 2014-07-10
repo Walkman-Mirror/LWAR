@@ -140,7 +140,7 @@ Public Class LWAR
             txtDomain.Text = My.Settings.Domain
             txtFile.Text = My.Settings.File
         End If
-        If My.Settings.AutoAssignUsername = True Then txtUsername.Text = My.User.Name
+        If My.Settings.AutoAssignUsername = True Then txtUsername.Text = Environment.UserName
         If My.Settings.ShowPassword = True Then txtPassword.PasswordChar = "" Else txtPassword.PasswordChar = "●"
         If My.Settings.Logging = True Then
             'Thank to DotNetPerls for this below code. Page reference: <"http://www.dotnetperls.com/streamwriter-vbnet">

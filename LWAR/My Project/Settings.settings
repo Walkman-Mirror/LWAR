@@ -41,5 +41,8 @@
     <Setting Name="LogTextFile" Type="System.String" Scope="User">
       <Value Profile="(Default)">log.txt</Value>
     </Setting>
+    <Setting Name="AutoAssignDomain" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

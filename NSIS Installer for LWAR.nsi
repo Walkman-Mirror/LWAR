@@ -1,6 +1,6 @@
 ; LWAR Installer NSIS Script
 ; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
-; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
+; As a program that all Power PC users should have, Notepad++ is recommended to edit this file
 
 AddBrandingImage top 20
 Icon "LWAR\Resources\1400410576_24736.ico"
@@ -52,16 +52,16 @@ SectionEnd
 ; Uninstaller
 
 Section "Uninstall"
-  Delete $INSTDIR\LWAR-Uninst.exe   ; Remove Application Files
-  Delete $INSTDIR\LWAR.exe
+  Delete "$INSTDIR\LWAR-Uninst.exe"   ; Remove Application Files
+  Delete "$INSTDIR\LWAR.exe"
   RMDir $INSTDIR
   
-  Delete $SMPROGRAMS\DeavmiOSS\LWAR.lnk   ; Remove Start Menu Shortcuts & Folder
+  Delete "$SMPROGRAMS\DeavmiOSS\LWAR.lnk"   ; Remove Start Menu Shortcuts & Folder
   Delete "$SMPROGRAMS\DeavmiOSS\Uninstall LWAR.lnk"
   RMDir $SMPROGRAMS\DeavmiOSS
   
-  Delete $DESKTOP\LWAR.lnk   ; Remove Desktop Shortcut
-  Delete $QUICKLAUNCH\LWAR.lnk   ; Remove Quick Launch shortcut
+  Delete "$DESKTOP\LWAR.lnk"   ; Remove Desktop Shortcut
+  Delete "$QUICKLAUNCH\LWAR.lnk"   ; Remove Quick Launch shortcut
 SectionEnd
 
 ; Functions

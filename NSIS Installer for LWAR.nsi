@@ -2,11 +2,12 @@
 ; get NSIS at http://tenet.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe
 ; As a program that all Power PC users should have, Notepad ++ is recommended to edit this file
 
-; AddBrandingImage top 20
-; Icon LWAR\youtube_withLink.ico
+AddBrandingImage top 20
+Icon "LWAR\Resources\1400410576_24736.ico"
 Caption "LWAR Installer"
 Name "LWAR"
 AutoCloseWindow true
+ShowInstDetails show
 
 InstallDir $PROGRAMFILES\DeavmiOSS
 
@@ -69,9 +70,7 @@ Function .onInit
   MessageBox MB_YESNO "This will install LWAR. Do you wish to continue?" IDYES gogogo
     Abort
   gogogo:
-;  File "LWAR\youtube_withLink.ico"
-;  SetBrandingImage "[/RESIZETOFIT] LWAR\youtube_withLink.ico"
-;  SetBrandingImage "[/RESIZETOFIT] youtube_withLink.ico"
+  SetBrandingImage "[/RESIZETOFIT] LWAR\Resources\1400410576_24736.ico"
   SetShellVarContext all
   SetAutoClose true
 FunctionEnd

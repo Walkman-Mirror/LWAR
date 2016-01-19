@@ -2,10 +2,10 @@
 ; get NSIS at http://nsis.sourceforge.net/Download
 ; As a program that all Power PC users should have, Notepad++ is recommended to edit this file
 
-AddBrandingImage top 20
 Icon "LWAR\Resources\1400410576_24736.ico"
 Caption "LWAR Installer"
 Name "LWAR"
+XPStyle on
 AutoCloseWindow true
 ShowInstDetails show
 
